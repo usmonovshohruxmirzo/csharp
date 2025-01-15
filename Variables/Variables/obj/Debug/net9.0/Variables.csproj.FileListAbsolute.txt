@@ -1,0 +1,15 @@
+D:\Usmonov Shohruxmiroz's Projects\C#\c-sharp\Variables\Variables\bin\Debug\net9.0\Variables.exe
+D:\Usmonov Shohruxmiroz's Projects\C#\c-sharp\Variables\Variables\bin\Debug\net9.0\Variables.deps.json
+D:\Usmonov Shohruxmiroz's Projects\C#\c-sharp\Variables\Variables\bin\Debug\net9.0\Variables.runtimeconfig.json
+D:\Usmonov Shohruxmiroz's Projects\C#\c-sharp\Variables\Variables\bin\Debug\net9.0\Variables.dll
+D:\Usmonov Shohruxmiroz's Projects\C#\c-sharp\Variables\Variables\bin\Debug\net9.0\Variables.pdb
+D:\Usmonov Shohruxmiroz's Projects\C#\c-sharp\Variables\Variables\obj\Debug\net9.0\Variables.GeneratedMSBuildEditorConfig.editorconfig
+D:\Usmonov Shohruxmiroz's Projects\C#\c-sharp\Variables\Variables\obj\Debug\net9.0\Variables.AssemblyInfoInputs.cache
+D:\Usmonov Shohruxmiroz's Projects\C#\c-sharp\Variables\Variables\obj\Debug\net9.0\Variables.AssemblyInfo.cs
+D:\Usmonov Shohruxmiroz's Projects\C#\c-sharp\Variables\Variables\obj\Debug\net9.0\Variables.csproj.CoreCompileInputs.cache
+D:\Usmonov Shohruxmiroz's Projects\C#\c-sharp\Variables\Variables\obj\Debug\net9.0\Variables.sourcelink.json
+D:\Usmonov Shohruxmiroz's Projects\C#\c-sharp\Variables\Variables\obj\Debug\net9.0\Variables.dll
+D:\Usmonov Shohruxmiroz's Projects\C#\c-sharp\Variables\Variables\obj\Debug\net9.0\refint\Variables.dll
+D:\Usmonov Shohruxmiroz's Projects\C#\c-sharp\Variables\Variables\obj\Debug\net9.0\Variables.pdb
+D:\Usmonov Shohruxmiroz's Projects\C#\c-sharp\Variables\Variables\obj\Debug\net9.0\Variables.genruntimeconfig.cache
+D:\Usmonov Shohruxmiroz's Projects\C#\c-sharp\Variables\Variables\obj\Debug\net9.0\ref\Variables.dll
