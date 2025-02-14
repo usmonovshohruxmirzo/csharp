@@ -40,7 +40,15 @@ Console.WriteLine(data);
 data = "Hello";
 Console.WriteLine(data);
 
-
 // Nullable Types
 int? nullableInt = null; // Can hold null or integer value
 Console.WriteLine($"value: {nullableInt}, type: {nullableInt?.GetType()?.Name ?? "Null"}");
+
+// Rules for Naming Variables
+
+int age1 = 30;       // Valid
+string _name = "Tom"; // Valid
+//double 2price = 15.5; // Invalid (Cannot start with a number)
+int @class = 10;    // Valid (Using @ to escape keywords)
+
+Console.WriteLine($"{age1} {_name} {@class}");
