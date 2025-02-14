@@ -1,0 +1,6 @@
+D:\Usmonov Shohruxmiroz's Projects\C#\c-sharp\Projects\CalculatorApp\CalculatorApp\obj\Debug\net9.0\CalculatorApp.csproj.AssemblyReference.cache
+D:\Usmonov Shohruxmiroz's Projects\C#\c-sharp\Projects\CalculatorApp\CalculatorApp\obj\Debug\net9.0\CalculatorApp.GeneratedMSBuildEditorConfig.editorconfig
+D:\Usmonov Shohruxmiroz's Projects\C#\c-sharp\Projects\CalculatorApp\CalculatorApp\obj\Debug\net9.0\CalculatorApp.AssemblyInfoInputs.cache
+D:\Usmonov Shohruxmiroz's Projects\C#\c-sharp\Projects\CalculatorApp\CalculatorApp\obj\Debug\net9.0\CalculatorApp.AssemblyInfo.cs
+D:\Usmonov Shohruxmiroz's Projects\C#\c-sharp\Projects\CalculatorApp\CalculatorApp\obj\Debug\net9.0\CalculatorApp.csproj.CoreCompileInputs.cache
+D:\Usmonov Shohruxmiroz's Projects\C#\c-sharp\Projects\CalculatorApp\CalculatorApp\obj\Debug\net9.0\CalculatorApp.sourcelink.json
