@@ -51,4 +51,4 @@ string _name = "Tom"; // Valid
 //double 2price = 15.5; // Invalid (Cannot start with a number)
 int @class = 10;    // Valid (Using @ to escape keywords)
 
-Console.WriteLine($"{age1} {_name} {@class}");
+Console.WriteLine($"""{age1} {_name} {@class}""");

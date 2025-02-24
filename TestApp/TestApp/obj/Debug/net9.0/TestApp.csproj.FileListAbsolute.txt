@@ -1,0 +1,15 @@
+D:\Usmonov Shohruxmiroz's Projects\C#\c-sharp\TestApp\TestApp\obj\Debug\net9.0\TestApp.GeneratedMSBuildEditorConfig.editorconfig
+D:\Usmonov Shohruxmiroz's Projects\C#\c-sharp\TestApp\TestApp\obj\Debug\net9.0\TestApp.AssemblyInfoInputs.cache
+D:\Usmonov Shohruxmiroz's Projects\C#\c-sharp\TestApp\TestApp\obj\Debug\net9.0\TestApp.AssemblyInfo.cs
+D:\Usmonov Shohruxmiroz's Projects\C#\c-sharp\TestApp\TestApp\obj\Debug\net9.0\TestApp.csproj.CoreCompileInputs.cache
+D:\Usmonov Shohruxmiroz's Projects\C#\c-sharp\TestApp\TestApp\obj\Debug\net9.0\TestApp.sourcelink.json
+D:\Usmonov Shohruxmiroz's Projects\C#\c-sharp\TestApp\TestApp\bin\Debug\net9.0\TestApp.exe
+D:\Usmonov Shohruxmiroz's Projects\C#\c-sharp\TestApp\TestApp\bin\Debug\net9.0\TestApp.deps.json
+D:\Usmonov Shohruxmiroz's Projects\C#\c-sharp\TestApp\TestApp\bin\Debug\net9.0\TestApp.runtimeconfig.json
+D:\Usmonov Shohruxmiroz's Projects\C#\c-sharp\TestApp\TestApp\bin\Debug\net9.0\TestApp.dll
+D:\Usmonov Shohruxmiroz's Projects\C#\c-sharp\TestApp\TestApp\bin\Debug\net9.0\TestApp.pdb
+D:\Usmonov Shohruxmiroz's Projects\C#\c-sharp\TestApp\TestApp\obj\Debug\net9.0\TestApp.dll
+D:\Usmonov Shohruxmiroz's Projects\C#\c-sharp\TestApp\TestApp\obj\Debug\net9.0\refint\TestApp.dll
+D:\Usmonov Shohruxmiroz's Projects\C#\c-sharp\TestApp\TestApp\obj\Debug\net9.0\TestApp.pdb
+D:\Usmonov Shohruxmiroz's Projects\C#\c-sharp\TestApp\TestApp\obj\Debug\net9.0\TestApp.genruntimeconfig.cache
+D:\Usmonov Shohruxmiroz's Projects\C#\c-sharp\TestApp\TestApp\obj\Debug\net9.0\ref\TestApp.dll
