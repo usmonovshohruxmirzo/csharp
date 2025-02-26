@@ -182,7 +182,31 @@ Console.WriteLine(int.MaxValue);
 Console.WriteLine(int.MinValue);
 
 System.UInt32 number = uint.MinValue;
+Console.WriteLine(number);
 
-uint num = 0x1234u; // The u suffix in 0x1234u means the number is explicitly an unsigned integer (uint)
+uint num = 0x1234u; // The "u" suffix in 0x1234u means the number is explicitly an unsigned integer (uint)
 
 Console.WriteLine(num);
+
+// Floating-point numeric types 
+
+// float - (Single - precision, 32 - bit)
+// double - (Double - precision, 64 - bit)
+
+float fnum = 3.1415927f; // Requires 'f' suffix
+Console.WriteLine(fnum);
+
+double dnum = 3.141592653589793;
+Console.WriteLine(dnum);
+
+System.Double da2 = 12.3;
+
+Console.WriteLine(da2);
+
+Console.WriteLine("Float:");
+Console.WriteLine(float.PositiveInfinity);
+Console.WriteLine(float.NegativeInfinity);
+
+Console.WriteLine("Double:");
+Console.WriteLine(double.PositiveInfinity);
+Console.WriteLine(double.NegativeInfinity);
