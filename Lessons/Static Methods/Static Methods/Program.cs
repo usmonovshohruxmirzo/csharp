@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
-
+using System.Linq;
+using System.Text.RegularExpressions;
 class Program
 {
     static void Main(string[] args)
@@ -37,6 +38,13 @@ class Program
 
         int result = Task.Run(() => FetchDataAsync()).Result; // Blocking call
         Console.WriteLine($"Result: {result}");
+
+        Console.WriteLine("hello".ToUpperCase());
+        Console.WriteLine("hello world".ToKebabCase());
+
+        // Expression-bodied Members
+        int Square(int x) => x * x; // Reduces code verbosity.
+        Console.WriteLine(Square(4));
     }
     static void sayHello(String name, int age)
     {
@@ -106,3 +114,29 @@ public static class MathHelper
 }
 
 //Extension Methods
+public static class StringExtensions
+{
+    public static string ToUpperCase(this string str) // this keyword makes it an extension method.
+    {
+        return str.ToUpper();
+    }
+
+    public static string ToKebabCase(this string str)
+    {
+        return Regex.Replace(str, @"\s+", "-").ToLower();
+    }
+}
+
+//Console.WriteLine("hello".ToUpperCase()); // Output: HELLO
+
+// Iterators
+
+
+//Access Modifiers(Visibility Control)
+class Example
+{
+    public void PublicMethod() { }  // Accessible anywhere
+    private void PrivateMethod() { } // Accessible only in this class
+    protected void ProtectedMethod() { } // Accessible in derived classes
+    internal void InternalMethod() { } // Accessible in the same assembly
+}

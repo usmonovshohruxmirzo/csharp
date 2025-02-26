@@ -12,9 +12,9 @@ using System;
 using System.Reflection;
 
 [assembly: System.Reflection.AssemblyCompanyAttribute("Static Methods")]
-[assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
+[assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+51ec764136496e088d0236817aa1ff449e7d516f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+68b2af91cd8025969e6dbbd89da79ad27f9913a2")]
 [assembly: System.Reflection.AssemblyProductAttribute("Static Methods")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Static Methods")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
