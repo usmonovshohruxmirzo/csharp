@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Usmonov Shohruxmiroz\u0027s Projects\\C#\\c-sharp\\Lessons\\Static Methods\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D8357AA5-A57C-418C-B0F6-7D1279EDF29E}|Static Methods\\Static Methods.csproj|d:\\usmonov shohruxmiroz\u0027s projects\\c#\\c-sharp\\lessons\\static methods\\static methods\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8357AA5-A57C-418C-B0F6-7D1279EDF29E}|Static Methods\\Static Methods.csproj|solutionrelative:static methods\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Usmonov Shohruxmiroz\u0027s Projects\\C#\\c-sharp\\Lessons\\Static Methods\\Static Methods\\Program.cs",
+              "RelativeDocumentMoniker": "Static Methods\\Program.cs",
+              "ToolTip": "D:\\Usmonov Shohruxmiroz\u0027s Projects\\C#\\c-sharp\\Lessons\\Static Methods\\Static Methods\\Program.cs",
+              "RelativeToolTip": "Static Methods\\Program.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAkwI4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-25T15:35:49.932Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -44,7 +44,7 @@ class Program
 
         // Expression-bodied Members
         int Square(int x) => x * x; // Reduces code verbosity.
-        Console.WriteLine(Square(4));
+        Console.WriteLine(Square(x: 10));
     }
     static void sayHello(String name, int age)
     {
