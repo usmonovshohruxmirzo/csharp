@@ -1,0 +1,15 @@
+D:\Usmonov Shohruxmiroz's Projects\C#\c-sharp\Lessons\Conditional Statements (if)\Conditional Statements (if)\bin\Debug\net8.0\Conditional Statements (if).exe
+D:\Usmonov Shohruxmiroz's Projects\C#\c-sharp\Lessons\Conditional Statements (if)\Conditional Statements (if)\bin\Debug\net8.0\Conditional Statements (if).deps.json
+D:\Usmonov Shohruxmiroz's Projects\C#\c-sharp\Lessons\Conditional Statements (if)\Conditional Statements (if)\bin\Debug\net8.0\Conditional Statements (if).runtimeconfig.json
+D:\Usmonov Shohruxmiroz's Projects\C#\c-sharp\Lessons\Conditional Statements (if)\Conditional Statements (if)\bin\Debug\net8.0\Conditional Statements (if).dll
+D:\Usmonov Shohruxmiroz's Projects\C#\c-sharp\Lessons\Conditional Statements (if)\Conditional Statements (if)\bin\Debug\net8.0\Conditional Statements (if).pdb
+D:\Usmonov Shohruxmiroz's Projects\C#\c-sharp\Lessons\Conditional Statements (if)\Conditional Statements (if)\obj\Debug\net8.0\Conditional Statements (if).GeneratedMSBuildEditorConfig.editorconfig
+D:\Usmonov Shohruxmiroz's Projects\C#\c-sharp\Lessons\Conditional Statements (if)\Conditional Statements (if)\obj\Debug\net8.0\Conditional Statements (if).AssemblyInfoInputs.cache
+D:\Usmonov Shohruxmiroz's Projects\C#\c-sharp\Lessons\Conditional Statements (if)\Conditional Statements (if)\obj\Debug\net8.0\Conditional Statements (if).AssemblyInfo.cs
+D:\Usmonov Shohruxmiroz's Projects\C#\c-sharp\Lessons\Conditional Statements (if)\Conditional Statements (if)\obj\Debug\net8.0\Conditional Statements (if).csproj.CoreCompileInputs.cache
+D:\Usmonov Shohruxmiroz's Projects\C#\c-sharp\Lessons\Conditional Statements (if)\Conditional Statements (if)\obj\Debug\net8.0\Conditional Statements (if).sourcelink.json
+D:\Usmonov Shohruxmiroz's Projects\C#\c-sharp\Lessons\Conditional Statements (if)\Conditional Statements (if)\obj\Debug\net8.0\Conditional Statements (if).dll
+D:\Usmonov Shohruxmiroz's Projects\C#\c-sharp\Lessons\Conditional Statements (if)\Conditional Statements (if)\obj\Debug\net8.0\refint\Conditional Statements (if).dll
+D:\Usmonov Shohruxmiroz's Projects\C#\c-sharp\Lessons\Conditional Statements (if)\Conditional Statements (if)\obj\Debug\net8.0\Conditional Statements (if).pdb
+D:\Usmonov Shohruxmiroz's Projects\C#\c-sharp\Lessons\Conditional Statements (if)\Conditional Statements (if)\obj\Debug\net8.0\Conditional Statements (if).genruntimeconfig.cache
+D:\Usmonov Shohruxmiroz's Projects\C#\c-sharp\Lessons\Conditional Statements (if)\Conditional Statements (if)\obj\Debug\net8.0\ref\Conditional Statements (if).dll
