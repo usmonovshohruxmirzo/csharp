@@ -93,6 +93,48 @@
 
             // Pass multidimensional arrays as arguments
             Print2DArray(new int[,] { { 1, 2 }, { 3, 4 }, { 5, 6 }, { 7, 8 } });
+
+            // Jagged arrays
+            int[][] jaddedArray1 = new int[3][];
+            jaddedArray1[0] = [1, 3, 5, 7, 9];
+            jaddedArray1[1] = [0, 2, 4, 6];
+            jaddedArray1[2] = [11, 22];
+
+            int[][] jaggedArray2 =
+            [
+                [1, 3, 5, 7, 9],
+                [0, 2, 4, 6],
+                [11, 22]
+            ];
+            jaggedArray2[0][1] = 77;
+            Console.WriteLine(jaggedArray2[0][1]);
+
+            int[][,] jaddedArray3 =
+            [
+                new int[,] { {1,3}, {5,7} },
+                new int[,] { {0,2}, {4,6}, {8,10} },
+                new int[,] { {11,22}, {99,88}, {0,9} }
+            ];
+            Console.WriteLine("{0}", jaddedArray3[0][0, 1]);
+            Console.WriteLine(jaddedArray3.Length);
+
+            int[][] arr = new int[2][];
+            arr[0] = [1, 3, 5, 7, 9];
+            arr[1] = [2, 4, 6, 8];
+
+            for (int i = 0; i < arr.Length; i++)
+            {
+                System.Console.Write("Element({0}): ", i);
+                
+                for (int j = 0; j < arr[i].Length; j++)
+                {
+                    System.Console.Write("{0}{1}", arr[i][j], j == (arr[i].Length - 1) ? "" : " ");
+                }
+
+                System.Console.WriteLine();
+            }
+
+            // Implicitly typed arrays
         }
 
         public static void DisplayArray(string[] arr) => Console.WriteLine(string.Join(" ", arr));
