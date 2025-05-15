@@ -124,17 +124,79 @@
 
             for (int i = 0; i < arr.Length; i++)
             {
-                System.Console.Write("Element({0}): ", i);
+                Console.Write("Element({0}): ", i);
                 
                 for (int j = 0; j < arr[i].Length; j++)
                 {
-                    System.Console.Write("{0}{1}", arr[i][j], j == (arr[i].Length - 1) ? "" : " ");
+                    Console.Write("{0}{1}", arr[i][j], j == (arr[i].Length - 1) ? "" : " ");
                 }
 
-                System.Console.WriteLine();
+                Console.WriteLine();
             }
 
             // Implicitly typed arrays
+
+            int[] ImplicitlyA = new[] { 1, 2, 3, 4, 5, 6 };
+            Console.WriteLine(string.Join(", ", ImplicitlyA));
+
+            var ImplicitlyB = new[] { "c#", "c", "rust" };
+            Console.WriteLine(string.Join(", ", ImplicitlyB));
+
+            int[][] c =
+            [
+                [1,2,3,4],
+                [5,6,7,8],
+            ];
+
+            for (int k = 0; k < c.Length; k++)
+            {
+                for (int j = 0; j < c.Length; j++)
+                {
+                    Console.WriteLine($"Element at c[{k}][{j}] is: {c[k][j]}");
+                }
+            }
+
+            string[][] d =
+            [
+                ["Luca", "Mads", "Luke", "Dinesh"],
+                ["Karen", "Suma", "Frances"]
+            ];
+
+            int idx = 0;
+            foreach (var subArray in d)
+            {
+                int j = 0;
+                foreach (var element in subArray)
+                {
+                    Console.WriteLine($"Element at d[{idx}][{j}] is: {element}");
+                    j++;
+                }
+                idx++;
+            }
+
+            var contacts = new[]
+            {
+                new
+                {
+                    Name = "Eugene Zabokritski",
+                    PhoneNumbers = new[] { "206-555-0108", "425-555-0001" }
+                },
+                new
+                {
+                    Name = "Hanying Feng",
+                    PhoneNumbers = new[] { "650-555-0199" }
+                }
+            };
+
+            foreach (var contact in contacts)
+            {
+                Console.WriteLine($"Name: {contact.Name}");
+                Console.WriteLine("Phone Numbers:");
+                foreach(var phone in contact.PhoneNumbers)
+                {
+                    Console.WriteLine($" - {phone}");
+                }
+            }
         }
 
         public static void DisplayArray(string[] arr) => Console.WriteLine(string.Join(" ", arr));
