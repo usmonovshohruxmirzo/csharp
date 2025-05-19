@@ -159,6 +159,92 @@ namespace CharsAndStrings
             string alphabet = new string(letters);
             Console.WriteLine(alphabet);
 
+
+            // Immutability of strings
+            string s1 = "A string is more ";
+            string s2 = "than the sum of its chars.";
+
+            // Concatenate s1 and s2. This actually creates a new
+            // string object and stores it in s1, releasing the
+            // reference to the original object.
+            s1 += s2;
+
+            Console.WriteLine(s1);
+
+            string str1 = "Hello ";
+            string str2 = str1;
+            str1 += "World";
+            Console.WriteLine(str2);
+
+            // Quoted string literals
+            string columns = "Column1\tColumn2\tColumn3";
+            Console.WriteLine(columns);
+
+            string rows = "Row 1\r\nRow 2\r\nRow 3";
+            Console.WriteLine(rows);
+
+            string title = "\"The \u00C6olean Harp\", by Samuel Taylor Coleridge";
+            Console.WriteLine(title);
+
+            // Verbatim string literals - Verbatim string literals are more convenient for multi-line strings
+            string text = @"My pensive SARA ! thy soft cheek reclined
+                Thus on mine arm, most soothing sweet it is
+                To sit beside our Cot,...";
+            Console.WriteLine(text);
+
+            string filePath = @"C:\Users\scoleridge\Documents\";
+            Console.WriteLine(filePath);
+
+            string quote = @"Her name was ""Sara."""; // Escaped " in verbatim
+            Console.WriteLine(quote);
+
+            // Raw string literals
+
+            string singleLine = """Friends say "hello" as they pass by.""";
+            string multiLine = """
+                "Hello World!" is typically the first program someone writes.
+            """;
+            string embeddedXML = """
+               <element attr = "content">
+                   <body style="normal">
+                       Here is the main text
+                   </body>
+                   <footer>
+                       Excerpts from "An amazing story"
+                   </footer>
+               </element >
+            """;
+            Console.WriteLine(embeddedXML);
+
+            string jsonString = """
+                {
+                    "Date": "2019-08-01T00:00:00-07:00",
+                    "TemperatureCelsius": 25,
+                    "Summary": "Hot",
+                    "DatesAvailable": [
+                    "2019-08-01T00:00:00-07:00",
+                    "2019-08-02T00:00:00-07:00"
+                    ],
+                    "TemperatureRanges": {
+                    "Cold": {
+                        "High": 20,
+                        "Low": -10
+                    },
+                    "Hot": {
+                        "High": 60,
+                        "Low": 20
+                    }
+                            },
+                    "SummaryWords": [
+                    "Cool",
+                    "Windy",
+                    "Humid"
+                    ]
+                }
+             """;
+            Console.WriteLine(jsonString);
+
+            // Format strings
         }
     }
 }
