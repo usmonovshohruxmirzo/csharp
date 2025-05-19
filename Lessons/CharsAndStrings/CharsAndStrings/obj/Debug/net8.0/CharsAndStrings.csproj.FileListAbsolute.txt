@@ -1,0 +1,15 @@
+D:\Usmonov Shohruxmiroz's Projects\C#\c-sharp\Lessons\CharsAndStrings\CharsAndStrings\bin\Debug\net8.0\CharsAndStrings.exe
+D:\Usmonov Shohruxmiroz's Projects\C#\c-sharp\Lessons\CharsAndStrings\CharsAndStrings\bin\Debug\net8.0\CharsAndStrings.deps.json
+D:\Usmonov Shohruxmiroz's Projects\C#\c-sharp\Lessons\CharsAndStrings\CharsAndStrings\bin\Debug\net8.0\CharsAndStrings.runtimeconfig.json
+D:\Usmonov Shohruxmiroz's Projects\C#\c-sharp\Lessons\CharsAndStrings\CharsAndStrings\bin\Debug\net8.0\CharsAndStrings.dll
+D:\Usmonov Shohruxmiroz's Projects\C#\c-sharp\Lessons\CharsAndStrings\CharsAndStrings\bin\Debug\net8.0\CharsAndStrings.pdb
+D:\Usmonov Shohruxmiroz's Projects\C#\c-sharp\Lessons\CharsAndStrings\CharsAndStrings\obj\Debug\net8.0\CharsAndStrings.GeneratedMSBuildEditorConfig.editorconfig
+D:\Usmonov Shohruxmiroz's Projects\C#\c-sharp\Lessons\CharsAndStrings\CharsAndStrings\obj\Debug\net8.0\CharsAndStrings.AssemblyInfoInputs.cache
+D:\Usmonov Shohruxmiroz's Projects\C#\c-sharp\Lessons\CharsAndStrings\CharsAndStrings\obj\Debug\net8.0\CharsAndStrings.AssemblyInfo.cs
+D:\Usmonov Shohruxmiroz's Projects\C#\c-sharp\Lessons\CharsAndStrings\CharsAndStrings\obj\Debug\net8.0\CharsAndStrings.csproj.CoreCompileInputs.cache
+D:\Usmonov Shohruxmiroz's Projects\C#\c-sharp\Lessons\CharsAndStrings\CharsAndStrings\obj\Debug\net8.0\CharsAndStrings.sourcelink.json
+D:\Usmonov Shohruxmiroz's Projects\C#\c-sharp\Lessons\CharsAndStrings\CharsAndStrings\obj\Debug\net8.0\CharsAndStrings.dll
+D:\Usmonov Shohruxmiroz's Projects\C#\c-sharp\Lessons\CharsAndStrings\CharsAndStrings\obj\Debug\net8.0\refint\CharsAndStrings.dll
+D:\Usmonov Shohruxmiroz's Projects\C#\c-sharp\Lessons\CharsAndStrings\CharsAndStrings\obj\Debug\net8.0\CharsAndStrings.pdb
+D:\Usmonov Shohruxmiroz's Projects\C#\c-sharp\Lessons\CharsAndStrings\CharsAndStrings\obj\Debug\net8.0\CharsAndStrings.genruntimeconfig.cache
+D:\Usmonov Shohruxmiroz's Projects\C#\c-sharp\Lessons\CharsAndStrings\CharsAndStrings\obj\Debug\net8.0\ref\CharsAndStrings.dll
