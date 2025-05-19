@@ -38,9 +38,29 @@ namespace CharsAndStrings
             Console.WriteLine(char.IsLetterOrDigit(c));
             Console.WriteLine(char.IsWhiteSpace(' '));
             Console.WriteLine(char.IsPunctuation('.'));
-
             Console.WriteLine(char.ToUpper(c));
             Console.WriteLine(char.ToLower(c));
+
+            // Examples
+            char chA = 'A';
+            char ch1 = '1';
+            string str = "test string";
+
+            Console.WriteLine(chA.CompareTo('B')); // Compares chA with 'B' alphabetically based on their Unicode values.
+            Console.WriteLine(chA.Equals('A')); // This method converts the character digit '1' into the numeric double 1.0.
+            Console.WriteLine(Char.GetNumericValue(ch1)); // This method converts the character digit '1' into the numeric double 1.0.
+            Console.WriteLine(Char.IsControl('\t')); // Checks if a character is a control character (like tab \t, newline \n, etc.). These characters control formatting, not text.
+            Console.WriteLine(Char.IsDigit(ch1));  // Checks if the character ch1 is a digit (0–9). '1' is a digit → returns true.
+            Console.WriteLine(Char.IsLetter(','));  // Checks if the character is a letter (A–Z, a–z, or letters from other languages). ',' is a punctuation mark → false.
+            Console.WriteLine(Char.IsLower('u')); // Returns true if the character is a lowercase letter. 'u' is lowercase → true.
+            Console.WriteLine(Char.IsNumber(ch1)); // Checks if a character is a numeric character, which includes more than just digits — for example, fractions like ¼, Roman numerals, etc.
+            Console.WriteLine(Char.IsPunctuation('.')); // Checks if the character is a punctuation symbol (like . , ! ? : ; etc.).
+            Console.WriteLine(Char.IsSeparator(str, 4)); // Checks if the character at index 4 in the string is a separator, like a space or line separator.
+            Console.WriteLine(Char.IsSymbol('+')); // Checks if the character is a symbol used in math or currency, like +, =, ¥, %, etc.
+            Console.WriteLine(Char.IsWhiteSpace(str, 4)); // Checks if the character at index 4 is whitespace, like
+            Console.WriteLine(Char.Parse("S")); // Converts a string of length 1 into a char. If the string has more than one character, it throws an error.
+            Console.WriteLine(Char.ToLower('M')); // Converts a uppercase character to lowercase.
+            Console.WriteLine('x'.ToString()); // Converts the character 'x' to a string "x". This is useful when you need to join chars into strings.
 
             // Escape Characters
             char newline = '\n';
@@ -86,6 +106,8 @@ namespace CharsAndStrings
                 Console.WriteLine($"Character: {rune} | Unicode: U+{rune.Value:X4} | IsLetter: {Rune.IsLetter(rune)}");
             }
 
+
+
             // Real - World Usage Examples
             char c3 = '5';
             if (char.IsDigit(c3))
@@ -97,10 +119,46 @@ namespace CharsAndStrings
                 Console.WriteLine("It's not a digit");
             }
 
-            // Replace the loop with LINQ to address the diagnostic S3267
             string sentence = "123abc!";
             int count = sentence.Count(char.IsDigit);
             Console.WriteLine(count);
+
+            // Strings ============================================================================================================
+
+            // Declare without initializing.
+            string message1;
+
+            // Initialize to null.
+            string? message2 = null;
+
+            // Initialize as an empty string.
+            // Use the Empty constant instead of the literal "".
+            string message3 = System.String.Empty;
+
+            // Initialize with a regular string literal.
+            string oldPath = "c:\\Program Files\\Microsoft Visual Studio 8.0";
+
+            // Initialize with a verbatim string literal.
+            string newPath = @"c:\Program Files\Microsoft Visual Studio 9.0";
+
+            // Use System.String if you prefer.
+            System.String greeting = "Hello World!";
+
+            // In local variables (i.e. within a method body)
+            // you can use implicit typing.
+            var temp = "I'm still a strongly-typed System.String!";
+
+            // Use a const string to prevent 'message4' from
+            // being used to store another string value.
+            const string message4 = "You can't get rid of me!";
+
+            // Use the String constructor only when creating
+            // a string from a char*, char[], or sbyte*. See
+            // System.String documentation for details.
+            char[] letters = { 'A', 'B', 'C' };
+            string alphabet = new string(letters);
+            Console.WriteLine(alphabet);
+
         }
     }
 }
