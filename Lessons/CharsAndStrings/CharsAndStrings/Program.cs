@@ -245,6 +245,67 @@ namespace CharsAndStrings
             Console.WriteLine(jsonString);
 
             // Format strings
+            var jh = (firstName: "Jupiter", lastName: "Hammon", born: 1711, published: 1761);
+            Console.WriteLine($"{jh.firstName} {jh.lastName} was an African American poet born in {jh.born}.");
+            Console.WriteLine($"He was first published in {jh.published} at the age of {jh.published - jh.born}.");
+            Console.WriteLine($"He'd be over {Math.Round((2018d - jh.born) / 100d) * 100d} years old today.");
+
+            int X = 2;
+            int Y = 3;
+
+            var pointMessage = $$"""The point {{{X}}, {{Y}}} is {{Math.Sqrt(X * X + Y * Y)}} from the origin.""";
+
+            Console.WriteLine(pointMessage);
+
+            // Verbatim string interpolation
+            var jh2 = (firstName: "Jupiter", lastName: "Hammon", born: 1711, published: 1761);
+            Console.WriteLine($@"{jh2.firstName} {jh2.lastName}
+                                was an African American poet born in {jh2.born}.");
+            Console.WriteLine(@$"He was first published in {jh2.published}
+                                at the age of {jh2.published - jh2.born}.");
+
+            // Composite formatting
+            var pw = (firstName: "Phillis", lastName: "Wheatley", born: 1753, published: 1773);
+            Console.WriteLine("{0} {1} was an African American poet born in {2}.", pw.firstName, pw.lastName, pw.born);
+            Console.WriteLine("She was first published in {0} at the age of {1}.", pw.published, pw.published - pw.born);
+            Console.WriteLine("She'd be over {0} years old today.", Math.Round((2018d - pw.born) / 100d) * 100d);
+
+            // Substrings
+            string s3 = "Visual C# Express";
+            Console.WriteLine(s3.Substring(7, 2));
+
+            Console.WriteLine(s3.Replace("C#", "Basic"));
+
+            int index = s3.IndexOf("C");
+            Console.WriteLine(index);
+
+            // Accessing individual characters
+            string s5 = "Printing backwards";
+
+            for (int i = 0; i < s5.Length; i++)
+            {
+                Console.Write(s5[s5.Length - i - 1]);
+            }
+
+            Console.WriteLine();
+
+            string question = "hOW DOES mICROSOFT wORD DEAL WITH THE cAPS lOCK KEY?";
+            System.Text.StringBuilder sb = new System.Text.StringBuilder(question);
+
+            for (int j = 0; j < sb.Length; j++)
+            {
+                if (System.Char.IsLower(sb[j]))
+                {
+                    sb[j] = System.Char.ToUpper(sb[j]);
+                }
+                else if (System.Char.IsUpper(sb[j]))
+                {
+                    sb[j] = System.Char.ToLower(sb[j]);
+                }
+            }
+
+            string corrected = sb.ToString();
+            System.Console.WriteLine(corrected);
         }
     }
 }
