@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Net.NetworkInformation;
 using System.Text;
 
 namespace CharsAndStrings
@@ -306,6 +307,41 @@ namespace CharsAndStrings
 
             string corrected = sb.ToString();
             System.Console.WriteLine(corrected);
+
+            // Null strings and empty strings
+
+            string str3 = "hello";
+            string? nullStr = null;
+            string emptyStr = String.Empty;
+
+            string tempStr = str3 + nullStr;
+            Console.WriteLine(tempStr);
+
+            bool b3 = (emptyStr == nullStr);
+            Console.WriteLine(b3);
+
+            string newStr = emptyStr + nullStr;
+            Console.WriteLine(emptyStr.Length);
+            Console.WriteLine(newStr.Length);
+
+            string s7 = "\x0" + "abc";
+            string s8 = "abc" + "\x0";
+            Console.WriteLine("*" + s7 + "*");
+            Console.WriteLine("*" + s8 + "*");
+            Console.WriteLine(s8.Length);
+
+
+            // Using StringBuilder for fast string creation
+            System.Text.StringBuilder sb2 = new System.Text.StringBuilder("Rat: the ideal pet");
+            sb2[0] = 'C';
+            Console.WriteLine(sb2.ToString());
+
+            var sb3 = new StringBuilder();
+            for (int i = 0; i < 10; i++)
+            {
+                sb3.Append(i.ToString());
+            }
+            Console.WriteLine(sb3);
         }
     }
 }
