@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Net.NetworkInformation;
 using System.Text;
+using System.Text.RegularExpressions;
+using System.Xml;
 
 namespace CharsAndStrings
 {
@@ -342,6 +344,119 @@ namespace CharsAndStrings
                 sb3.Append(i.ToString());
             }
             Console.WriteLine(sb3);
+
+            sb3[0] = sb3[9];
+
+            Console.WriteLine(sb3);
+
+            // How to determine whether a string represents a numeric value
+            /*
+             TryParse in C# is a method used to safely convert a string to a value type (like int, long, byte, decimal, etc.) without throwing an exception if the conversion fails.
+             Instead, it returns a boolean indicating success or failure, and outputs the converted value via an out parameter.
+             */
+
+            int numberr;
+            bool resultt = int.TryParse("123", out numberr);
+            Console.WriteLine(resultt);
+
+            resultt = int.TryParse("abc", out numberr);
+            Console.WriteLine(resultt);
+
+            int i3 = 0;
+            string s4 = "108";
+            bool result = int.TryParse(s4, out i3);
+            Console.WriteLine(result);
+
+            string numString = "1287543"; //"1287543.0" will return false for a long
+            long number1 = 0;
+            bool canConvert = long.TryParse(numString, out number1);
+            if (canConvert) Console.WriteLine($"number1 now = {number1}");
+            else Console.WriteLine("numString is not a valid long");
+
+            byte number2 = 0;
+            numString = "255"; // A value of 256 will return false
+            canConvert = byte.TryParse(numString, out number2);
+            if (canConvert) Console.WriteLine($"number2 now = {number2}");
+            else Console.WriteLine("numString is not a valid byte");
+
+            decimal number3 = 0;
+            numString = "27.3"; //"27" is also a valid decimal
+            canConvert = decimal.TryParse(numString, out number3);
+            if (canConvert) Console.WriteLine($"number3 now = {number3}");
+            else Console.WriteLine("number3 is not a valid decimal");
+
+
+            // String interpolation using $
+            var namee = "Alex";
+            var date = DateTime.Now;
+            // Composite formatting:
+            Console.WriteLine("Hello, {0}! Today is {1}, it's {2:HH:mm} now.", namee, date.DayOfWeek, date);
+            // String interpolation:
+            Console.WriteLine($"Hello, {namee}! Today is {date.DayOfWeek}, it's {date:HH:mm:ss} now.");
+
+            // Structure of an interpolated string
+            //{< interpolationExpression > [,< width >][:< formatString >]} 
+            Console.WriteLine($"|{"Left",-7}|{"Right",7}|");
+
+            const int FieldWidthRightAligned = 40;
+            Console.WriteLine($"{Math.PI, FieldWidthRightAligned} - default formatting of the pi number");
+            Console.WriteLine($"{Math.PI, FieldWidthRightAligned:F3} - display only three decimal digits of the pi number");
+
+            //Console.Write("Enter num: ");
+            //int safetyScore;
+            //if (int.TryParse(Console.ReadLine(), out safetyScore))
+            //{
+            //    string message = $"The usage policy for {safetyScore} is {safetyScore switch
+            //    {
+            //        > 90 => "Unlimited usage",
+            //        > 80 => "General usage, with daily safety check",
+            //        > 70 => "Issues must be addressed within 1 week",
+            //        > 50 => "Issues must be addressed within 1 day",
+            //        _ => "Issues must be addressed before continued use",
+            //    }}";
+            //    Console.WriteLine(message);
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Invalid input. Please enter a valid number.");
+            //}
+
+            // Interpolated raw string literals
+
+            int X2 = 2;
+            int Y2 = 3;
+
+            var pointMessage2 = $"""The point "{X2}, {Y2}" is {Math.Sqrt(X2 * X2 + Y2 * Y2):F3} from the origin""";
+            var pointMessage3 = $$"""{The point {{{X2}}, {{Y2}}} is {{Math.Sqrt(X2 * X2 + Y2 * Y2):F3}} from the origin}""";
+            var pointMessage4 = $$$""""{{The point {{{X2}}}, {{{Y2}}}} is {{{Math.Sqrt(X2 * X2 + Y2 * Y2):F3}}} from the origin}"""";
+            var pointMessage5 = $$$$"""""{{The point {{{{X2}}}}, {{{{Y2}}}}} is {{{{Math.Sqrt(X2 * X2 + Y2 * Y2):F3}}}} from the origin}""""";
+            Console.WriteLine(pointMessage2);
+            Console.WriteLine(pointMessage3);
+            Console.WriteLine(pointMessage4);
+            Console.WriteLine(pointMessage5);
+
+            // Special characters
+            string name2 = "Horace";
+            int age2 = 34;
+            Console.WriteLine($"He asked, \"Is your name {name}?\", but didn't wait for a reply :-{{");
+            Console.WriteLine($"{name2} is {age2} year{(age2 == 1 ? "" : "s")} old.");
+
+            //Culture - specific formatting
+            double speedOfLight = 299792.458;
+
+            System.Globalization.CultureInfo.CurrentCulture = System.Globalization.CultureInfo.GetCultureInfo("nl-NL");
+            string messageInCurrentCulture = $"The speed of light is {speedOfLight:N3} km/s.";
+
+            var specificCulture = System.Globalization.CultureInfo.GetCultureInfo("en-IN");
+            string messageInSpecificCulture = string.Create(
+                specificCulture, $"The speed of light is {speedOfLight:N3} km/s.");
+
+            string messageInInvariantCulture = string.Create(
+                System.Globalization.CultureInfo.InvariantCulture, $"The speed of light is {speedOfLight:N3} km/s.");
+
+            Console.WriteLine($"{System.Globalization.CultureInfo.CurrentCulture,-10} {messageInCurrentCulture}");
+            Console.WriteLine($"{specificCulture,-10} {messageInSpecificCulture}");
+            Console.WriteLine($"{"Invariant",-10} {messageInInvariantCulture}");
         }
     }
 }
