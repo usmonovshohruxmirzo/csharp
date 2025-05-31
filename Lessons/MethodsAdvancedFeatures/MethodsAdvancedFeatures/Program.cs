@@ -1,6 +1,8 @@
-﻿using System.Text;
+﻿using ReferenceParamsDemoApp;
 using StringExtensions;
-using ReferenceParamsDemoApp;
+using System.Collections.Generic;
+using System.Text;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace MethodsAdvancedFeatures
 {
@@ -43,18 +45,24 @@ namespace MethodsAdvancedFeatures
             Console.WriteLine("\nAPP DEMO =========================================\n");
             App.CreateProduct(out Product newProduct, 10, "Tablet", 400);
 
-            App.ApplyTax(ref newProduct, 18);
+            // ref usage
+            App.ApplyTax(ref newProduct, 200);
 
+            // in usage
             App.PrintProduct(in newProduct);
 
+            // readonly ref usage
             ref readonly var selectedProduct = ref App.GetProductById(2);
             Console.WriteLine($"Readonly Product: {selectedProduct.Name}, ${selectedProduct.Price}");
 
+            // params usage
             App.GreetCustomers("Ali", "Bobur", "Zarina");
 
+            // extension method usage
             double discountedPrice = newProduct.Price.ApplyDiscount(10);
             Console.WriteLine($"Discounted Price: ${discountedPrice:F2}");
 
+            // tuple usage
             var productList = new List<Product> { newProduct, selectedProduct };
             var (count, total) = App.GetSummary(productList);
             Console.WriteLine($"Product Count: {count}, Total: ${total:F2}");
