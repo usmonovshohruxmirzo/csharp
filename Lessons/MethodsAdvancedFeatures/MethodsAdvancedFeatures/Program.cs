@@ -1,4 +1,6 @@
 ﻿using System.Text;
+using StringExtensions;
+using ReferenceParamsDemoApp;
 
 namespace MethodsAdvancedFeatures
 {
@@ -35,6 +37,27 @@ namespace MethodsAdvancedFeatures
             Console.WriteLine(user2.ToKebabCase());
             Console.WriteLine(user2.ToSnakeCase());
             Console.WriteLine(user.ToSpongeCase());
+
+
+            // App demo
+            Console.WriteLine("\nAPP DEMO =========================================\n");
+            App.CreateProduct(out Product newProduct, 10, "Tablet", 400);
+
+            App.ApplyTax(ref newProduct, 18);
+
+            App.PrintProduct(in newProduct);
+
+            ref readonly var selectedProduct = ref App.GetProductById(2);
+            Console.WriteLine($"Readonly Product: {selectedProduct.Name}, ${selectedProduct.Price}");
+
+            App.GreetCustomers("Ali", "Bobur", "Zarina");
+
+            double discountedPrice = newProduct.Price.ApplyDiscount(10);
+            Console.WriteLine($"Discounted Price: ${discountedPrice:F2}");
+
+            var productList = new List<Product> { newProduct, selectedProduct };
+            var (count, total) = App.GetSummary(productList);
+            Console.WriteLine($"Product Count: {count}, Total: ${total:F2}");
         }
         //  1. ref, out, in, readonly ref – Pass by Reference
         // Used to pass a variable by reference to a method so that the method can access or modify the original data.
@@ -94,41 +117,118 @@ namespace MethodsAdvancedFeatures
 }
 
 // Extension Methods – Add Methods to Existing Types
-public static class StringExtensions
+namespace StringExtensions
 {
-    public static string ToTitleCase(this string input)
+    public static class StringExtensions
     {
-        if (string.IsNullOrWhiteSpace(input)) return input;
-
-        return char.ToUpper(input[0]) + input.Substring(1).ToLower();
-    }
-
-    public static string ToKebabCase(this string input)
-    {
-        if (string.IsNullOrWhiteSpace(input)) return input;
-
-        return string.Join("-", input.Split(" "));
-    }
-
-    public static string ToSnakeCase(this string input)
-    {
-        if (string.IsNullOrWhiteSpace(input)) return input;
-
-        return string.Join("_", input.Split(" "));
-    }
-
-    public static string ToSpongeCase(this string input)
-    {
-        if (string.IsNullOrWhiteSpace(input)) return input;
-        
-        StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < input.Length; i++)
+        public static string ToTitleCase(this string input)
         {
-            if ((i & 1) == 0) sb.Append(char.ToUpper(input[i]));
-            else sb.Append(char.ToLower(input[i]));
+            if (string.IsNullOrWhiteSpace(input)) return input;
+
+            return char.ToUpper(input[0]) + input.Substring(1).ToLower();
         }
-        return sb.ToString().Trim();
+
+        public static string ToKebabCase(this string input)
+        {
+            if (string.IsNullOrWhiteSpace(input)) return input;
+
+            return string.Join("-", input.Split(" "));
+        }
+
+        public static string ToSnakeCase(this string input)
+        {
+            if (string.IsNullOrWhiteSpace(input)) return input;
+
+            return string.Join("_", input.Split(" "));
+        }
+
+        public static string ToSpongeCase(this string input)
+        {
+            if (string.IsNullOrWhiteSpace(input)) return input;
+
+            StringBuilder sb = new StringBuilder();
+            for (int i = 0; i < input.Length; i++)
+            {
+                if ((i & 1) == 0) sb.Append(char.ToUpper(input[i]));
+                else sb.Append(char.ToLower(input[i]));
+            }
+            return sb.ToString().Trim();
+        }
     }
+
 }
 
-// A demo console app to show the use of ref, out, in, readonly ref, params, tuples, and extension methods
+namespace ReferenceParamsDemoApp
+{
+    public struct Product
+    {
+        public int Id;
+        public string Name;
+        public double Price;
+    }
+
+    public static class Extensions
+    {
+        public static double ApplyDiscount(this double price, double percent)
+        {
+            return price - (price * percent / 100);
+        }
+    }
+
+    public static class App
+    {
+        public static void ApplyTax(ref Product product, double taxPercent)
+        {
+            product.Price += product.Price * taxPercent / 100;
+        }
+
+        public static void CreateProduct(out Product product, int id, string name, double price)
+        {
+            product = new Product { Id = id, Name = name, Price = price };
+        }
+
+        public static void PrintProduct(in Product product)
+        {
+            Console.WriteLine($"Product: {product.Id}, {product.Name}, ${product.Price:F2}");
+        }
+
+        public static readonly Product[] Products = new Product[]
+        {
+            new Product { Id = 1, Name = "Laptop", Price = 1500 },
+            new Product { Id = 2, Name = "Mouse", Price = 25 },
+            new Product { Id = 3, Name = "Keyboard", Price = 75 }
+        };
+
+        public static ref readonly Product GetProductById(int id)
+        {
+            for (int i = 0; i < Products.Length; i++)
+            {
+                if (Products[i].Id == id)
+                {
+                    return ref Products[i];
+                }
+            }
+            throw new ArgumentException("Product not found");
+        }
+
+        public static void GreetCustomers(params string[] names)
+        {
+            foreach(var name in names)
+            {
+                Console.WriteLine($"Hello, {name}!");
+            }
+        }
+
+        public static (int count, double price) GetSummary(List<Product> products)
+        {
+            int count = products.Count;
+            double total = 0;
+            foreach(var product in products)
+            {
+                total += product.Price;
+            }
+            return (count, total);
+        }
+
+    }
+}
