@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Integers")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f212d4e11ea10d916a0d2c0faa913bc96fdeff1e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3e35fc46f02d97ad6e61fb51a165ba027eba0617")]
 [assembly: System.Reflection.AssemblyProductAttribute("Integers")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Integers")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

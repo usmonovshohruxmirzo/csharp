@@ -225,4 +225,110 @@
 //BigInteger bigNum = BigInteger.Pow(10, 100); // 10^100
 //Console.WriteLine(bigNum);
 
-Console.ReadKey();
+// Practise
+string DecimalToHex(int num)
+{
+    if (num == 0)
+    {
+        return "0";
+    }
+
+    string hex = "";
+    char[] hexChars = "0123456789ABCDEF".ToCharArray();
+
+    while (num > 0)
+    {
+        int rem = num % 16;
+        hex = hexChars[rem] + hex;
+        num /= 16;
+    }
+
+    return hex.ToUpper();
+}
+
+Console.WriteLine(DecimalToHex(120));
+
+int HexToDecimal(string hex)
+{
+    int result = 0;
+    hex = hex.ToUpper();
+
+    for (int i = 0; i < hex.Length; i++)
+    {
+        char c = hex[i];
+        int value;
+
+        if (c >= '0' && c <= '9')
+        {
+            value = c - '0';
+        }
+        else
+        {
+            value = c - 'A' + 10;
+        }
+
+        result = result * 16 + value;
+    }
+
+    return result;
+}
+Console.WriteLine(HexToDecimal("AA"));
+
+string DecimalToBinary(int num)
+{
+    if (num == 0)
+    {
+        return "0";
+    }
+
+    string bin = "";
+
+    while(num > 0)
+    {
+        bin = (num % 2) + bin;
+        num /= 2;
+    }
+
+    return bin;
+}
+
+Console.WriteLine(DecimalToBinary(20));
+
+int BinaryToDecimal(string bin)
+{
+    int result = 0;
+
+    for (int i = 0; i < bin.Length; i++)
+    {
+        result = result * 2 + (bin[i] - '0');
+    }
+
+    return result;
+}
+
+// (1 × 2²) + (1 × 2¹) + (1 × 2⁰)  = 4 + 2 + 1 = 7
+Console.WriteLine(BinaryToDecimal("111"));
+
+string BinaryToHex(string bin)
+{
+    while (bin.Length % 4 != 0) bin = "0" + bin;
+
+    string hex = "";
+    for (int i = 0; i < bin.Length; i += 4)
+    {
+        string nibble = bin.Substring(i, 4);
+        int value = 0;
+
+        for (int j = 0; j < 4; j++)
+        {
+            value = value * 2 + (nibble[j] - '0');
+        }
+
+        if (value < 10) hex += (char)('0' + value);
+        else hex += (char)('A' + value - 10);
+    }
+
+    return hex;
+}
+
+Console.WriteLine(BinaryToHex("11011100"));
