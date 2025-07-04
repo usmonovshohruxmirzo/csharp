@@ -115,3 +115,72 @@ DisplayMeasurements_Switch3(5, 5);
 DisplayMeasurements_Switch3(-5, 5);
 
 // Pattern matching - the is and switch expressions, and operators and, or, and not in patterns
+
+// Pattern Matching with is Operator
+object value = 42;
+
+if (value is int number)
+{
+    Console.WriteLine($"The number is {number}.");
+}
+
+int x = 10;
+
+if (x is > 0 and < 100)
+{
+    Console.WriteLine("x is between 1 and 99.");
+}
+
+// Pattern Matching in switch Expressions
+string GetCategory(object input) => input switch
+{
+    int i when i > 0 => "Positive Integer",
+    int i when i < 0 => "Negative Integer",
+    double d => "Floating-point number",
+    string s => $"String: {s}",
+    null => "Null value",
+    _ => "Unkown type"
+};
+
+Console.WriteLine(GetCategory("Hello"));
+
+// Using Tuples in switch
+string GetQuadrant(int x, int y) => (x, y) switch
+{
+    ( > 0, > 0) => "First Quadrant",
+    ( < 0, > 0) => "Second Quadrant",
+    ( < 0, < 0) => "Third Quadrant",
+    ( > 0, < 0) => "Fourth Quadrant",
+    (0, 0) => "Origin",
+    _ => "On an axis"
+};
+
+Console.WriteLine(GetQuadrant(3, 4)); 
+Console.WriteLine(GetQuadrant(-5, 6));
+Console.WriteLine(GetQuadrant(0, 0));
+
+// Logical Operators in Pattern Matching (and, or, not)
+string DescribeNumber(int n) => n switch
+{
+    > 0 and < 10 => "Single-digit positive number",
+    >= 10 and < 100 => "Two-digit positive number",
+    _ => "Other number"
+};
+Console.WriteLine(DescribeNumber(7));
+Console.WriteLine(DescribeNumber(42));
+Console.WriteLine(DescribeNumber(100));
+
+string GetTemperatureCategory(double temp) => temp switch
+{
+    < 0 or > 40 => "Extreme temperature",
+    >= 0 and <= 10 => "Cold",
+    > 10 and <= 30 => "Mild",
+    _ => "Warm"
+};
+
+Console.WriteLine(GetTemperatureCategory(-5));
+Console.WriteLine(GetTemperatureCategory(8));
+Console.WriteLine(GetTemperatureCategory(22));
+Console.WriteLine(GetTemperatureCategory(45));
+
+

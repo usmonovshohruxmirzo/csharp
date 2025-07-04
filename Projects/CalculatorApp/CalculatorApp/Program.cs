@@ -26,7 +26,7 @@ public class Program : Form
         BackColor = Color.LightGray;
         FormBorderStyle = FormBorderStyle.FixedDialog; // Disable resizing
         MaximizeBox = false; // Disable maximize button
-
+        
         // Create a Panel to hold the TextBox with margin
         var displayPanel = new Panel
         {

@@ -61,13 +61,25 @@ public class Person
     }
 }
 
-// ----------------------------------------------------------
-// Main program demonstrating Reflection features
-// ----------------------------------------------------------
+namespace MyNamespace  
+{  
+    public class MyClass { }  
+}
+
 class Program
 {
     static void Main(string[] args)
     {
+        // ========== View type information
+        Assembly a = typeof(object).Module.Assembly;
+        Console.WriteLine(a);
+        
+        //
+        
+        var type = typeof(MyNamespace.MyClass);
+        string info = $"{type.Namespace}, {type.Name}, {type.FullName}, {type.BaseType.Name}";
+        Console.WriteLine(info);
+
         // --------------------------------------------------
         // 1️⃣ Get Type metadata for Person class
         // --------------------------------------------------

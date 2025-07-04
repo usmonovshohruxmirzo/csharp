@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Static Methods")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+51ec764136496e088d0236817aa1ff449e7d516f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7879e3d3fc2bf4b3f9044f23df1a7f01b060e57e")]
 [assembly: System.Reflection.AssemblyProductAttribute("Static Methods")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Static Methods")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

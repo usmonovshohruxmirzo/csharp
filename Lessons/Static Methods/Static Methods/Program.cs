@@ -140,3 +140,26 @@ class Example
     protected void ProtectedMethod() { } // Accessible in derived classes
     internal void InternalMethod() { } // Accessible in the same assembly
 }
+
+
+// Factory Pattern
+
+class User
+{
+    public string Name;
+
+    private User(string name)
+    {
+        Name = name;
+    }
+
+    public static User CreateUser()
+    {
+        return new User("Alex");
+    }
+
+    public static User CreateWithName(string name)
+    {
+        return new User(name);
+    }
+}
