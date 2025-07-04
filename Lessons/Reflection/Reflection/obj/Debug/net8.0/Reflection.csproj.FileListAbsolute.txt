@@ -1,0 +1,15 @@
+D:\Usmonov Shohruxmiroz's Projects\C#\c-sharp\Lessons\Reflection\Reflection\bin\Debug\net8.0\Reflection.exe
+D:\Usmonov Shohruxmiroz's Projects\C#\c-sharp\Lessons\Reflection\Reflection\bin\Debug\net8.0\Reflection.deps.json
+D:\Usmonov Shohruxmiroz's Projects\C#\c-sharp\Lessons\Reflection\Reflection\bin\Debug\net8.0\Reflection.runtimeconfig.json
+D:\Usmonov Shohruxmiroz's Projects\C#\c-sharp\Lessons\Reflection\Reflection\bin\Debug\net8.0\Reflection.dll
+D:\Usmonov Shohruxmiroz's Projects\C#\c-sharp\Lessons\Reflection\Reflection\bin\Debug\net8.0\Reflection.pdb
+D:\Usmonov Shohruxmiroz's Projects\C#\c-sharp\Lessons\Reflection\Reflection\obj\Debug\net8.0\Reflection.GeneratedMSBuildEditorConfig.editorconfig
+D:\Usmonov Shohruxmiroz's Projects\C#\c-sharp\Lessons\Reflection\Reflection\obj\Debug\net8.0\Reflection.AssemblyInfoInputs.cache
+D:\Usmonov Shohruxmiroz's Projects\C#\c-sharp\Lessons\Reflection\Reflection\obj\Debug\net8.0\Reflection.AssemblyInfo.cs
+D:\Usmonov Shohruxmiroz's Projects\C#\c-sharp\Lessons\Reflection\Reflection\obj\Debug\net8.0\Reflection.csproj.CoreCompileInputs.cache
+D:\Usmonov Shohruxmiroz's Projects\C#\c-sharp\Lessons\Reflection\Reflection\obj\Debug\net8.0\Reflection.sourcelink.json
+D:\Usmonov Shohruxmiroz's Projects\C#\c-sharp\Lessons\Reflection\Reflection\obj\Debug\net8.0\Reflection.dll
+D:\Usmonov Shohruxmiroz's Projects\C#\c-sharp\Lessons\Reflection\Reflection\obj\Debug\net8.0\refint\Reflection.dll
+D:\Usmonov Shohruxmiroz's Projects\C#\c-sharp\Lessons\Reflection\Reflection\obj\Debug\net8.0\Reflection.pdb
+D:\Usmonov Shohruxmiroz's Projects\C#\c-sharp\Lessons\Reflection\Reflection\obj\Debug\net8.0\Reflection.genruntimeconfig.cache
+D:\Usmonov Shohruxmiroz's Projects\C#\c-sharp\Lessons\Reflection\Reflection\obj\Debug\net8.0\ref\Reflection.dll
