@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "D:\\Usmonov Shohruxmiroz\u0027s Projects\\C#\\c-sharp\\Lessons\\Reflection\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{D2A6D060-B899-4F0B-9551-CB3F6A4E5E2D}|Reflection\\Reflection.csproj|d:\\usmonov shohruxmiroz\u0027s projects\\c#\\c-sharp\\lessons\\reflection\\reflection\\viewtypeinformation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2A6D060-B899-4F0B-9551-CB3F6A4E5E2D}|Reflection\\Reflection.csproj|solutionrelative:reflection\\viewtypeinformation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D2A6D060-B899-4F0B-9551-CB3F6A4E5E2D}|Reflection\\Reflection.csproj|d:\\usmonov shohruxmiroz\u0027s projects\\c#\\c-sharp\\lessons\\reflection\\reflection\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D2A6D060-B899-4F0B-9551-CB3F6A4E5E2D}|Reflection\\Reflection.csproj|solutionrelative:reflection\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -13,7 +17,7 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 544,
+          "DockedWidth": 200,
           "SelectedChildIndex": 10,
           "Children": [
             {
@@ -59,15 +63,38 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "ViewTypeInformation.cs",
+              "DocumentMoniker": "D:\\Usmonov Shohruxmiroz\u0027s Projects\\C#\\c-sharp\\Lessons\\Reflection\\Reflection\\ViewTypeInformation.cs",
+              "RelativeDocumentMoniker": "Reflection\\ViewTypeInformation.cs",
+              "ToolTip": "D:\\Usmonov Shohruxmiroz\u0027s Projects\\C#\\c-sharp\\Lessons\\Reflection\\Reflection\\ViewTypeInformation.cs",
+              "RelativeToolTip": "Reflection\\ViewTypeInformation.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwBMAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-06T12:47:16.852Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Usmonov Shohruxmiroz\u0027s Projects\\C#\\c-sharp\\Lessons\\Reflection\\Reflection\\Program.cs",
               "RelativeDocumentMoniker": "Reflection\\Program.cs",
               "ToolTip": "D:\\Usmonov Shohruxmiroz\u0027s Projects\\C#\\c-sharp\\Lessons\\Reflection\\Reflection\\Program.cs",
               "RelativeToolTip": "Reflection\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAGAAAAAAAAAAAAAiwAsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-27T08:14:22.174Z",
               "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 191,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
             }
           ]
         }
