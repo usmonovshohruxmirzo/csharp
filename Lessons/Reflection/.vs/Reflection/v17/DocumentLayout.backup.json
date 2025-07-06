@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "D:\\Usmonov Shohruxmiroz\u0027s Projects\\C#\\c-sharp\\Lessons\\Reflection\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{D2A6D060-B899-4F0B-9551-CB3F6A4E5E2D}|Reflection\\Reflection.csproj|d:\\usmonov shohruxmiroz\u0027s projects\\c#\\c-sharp\\lessons\\reflection\\reflection\\reflection.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{D2A6D060-B899-4F0B-9551-CB3F6A4E5E2D}|Reflection\\Reflection.csproj|solutionrelative:reflection\\reflection.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D2A6D060-B899-4F0B-9551-CB3F6A4E5E2D}|Reflection\\Reflection.csproj|d:\\usmonov shohruxmiroz\u0027s projects\\c#\\c-sharp\\lessons\\reflection\\reflection\\viewtypeinformation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D2A6D060-B899-4F0B-9551-CB3F6A4E5E2D}|Reflection\\Reflection.csproj|solutionrelative:reflection\\viewtypeinformation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -63,19 +67,31 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Reflection",
+              "DocumentMoniker": "D:\\Usmonov Shohruxmiroz\u0027s Projects\\C#\\c-sharp\\Lessons\\Reflection\\Reflection\\Reflection.csproj",
+              "RelativeDocumentMoniker": "Reflection\\Reflection.csproj",
+              "ToolTip": "D:\\Usmonov Shohruxmiroz\u0027s Projects\\C#\\c-sharp\\Lessons\\Reflection\\Reflection\\Reflection.csproj",
+              "RelativeToolTip": "Reflection\\Reflection.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-07-06T14:38:51.421Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "ViewTypeInformation.cs",
               "DocumentMoniker": "D:\\Usmonov Shohruxmiroz\u0027s Projects\\C#\\c-sharp\\Lessons\\Reflection\\Reflection\\ViewTypeInformation.cs",
               "RelativeDocumentMoniker": "Reflection\\ViewTypeInformation.cs",
               "ToolTip": "D:\\Usmonov Shohruxmiroz\u0027s Projects\\C#\\c-sharp\\Lessons\\Reflection\\Reflection\\ViewTypeInformation.cs",
               "RelativeToolTip": "Reflection\\ViewTypeInformation.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAQwBMAAAA0AAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABMAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-06T12:47:16.852Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Usmonov Shohruxmiroz\u0027s Projects\\C#\\c-sharp\\Lessons\\Reflection\\Reflection\\Program.cs",
               "RelativeDocumentMoniker": "Reflection\\Program.cs",
@@ -83,8 +99,7 @@
               "RelativeToolTip": "Reflection\\Program.cs",
               "ViewState": "AgIAAGAAAAAAAAAAAAAiwAsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-27T08:14:22.174Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-27T08:14:22.174Z"
             }
           ]
         },
