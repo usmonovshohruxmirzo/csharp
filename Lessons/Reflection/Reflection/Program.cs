@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Reflection;
-
+using ViewTypeInformation;
 // ----------------------------------------------------------
 // Custom attribute definition
 // ----------------------------------------------------------
@@ -61,9 +61,9 @@ public class Person
     }
 }
 
-namespace MyNamespace  
-{  
-    public class MyClass { }  
+namespace MyNamespace 
+{ 
+    public class MyClass { } 
 }
 
 class Program
@@ -73,6 +73,9 @@ class Program
         // ========== View type information
         Assembly a = typeof(object).Module.Assembly;
         Console.WriteLine(a);
+
+        ViewTypeInformation.ViewTypeInformation.View();
+        ViewTypeInformation.ViewTypeInformation.MyMethodInfo();
         
         //
         
@@ -83,7 +86,7 @@ class Program
         // --------------------------------------------------
         // 1️⃣ Get Type metadata for Person class
         // --------------------------------------------------
-        Type personType = typeof(Person);  // gets Type object at compile-time
+        Type personType = typeof(Person);  // gets the Type object at compile-time
         Console.WriteLine("Type Name: " + personType.FullName);
 
         // --------------------------------------------------
