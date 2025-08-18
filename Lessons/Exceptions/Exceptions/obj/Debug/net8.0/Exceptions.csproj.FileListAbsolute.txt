@@ -1,0 +1,15 @@
+D:\Usmonov Shohruxmiroz's Projects\C#\c-sharp\Lessons\Exceptions\Exceptions\bin\Debug\net8.0\Exceptions.exe
+D:\Usmonov Shohruxmiroz's Projects\C#\c-sharp\Lessons\Exceptions\Exceptions\bin\Debug\net8.0\Exceptions.deps.json
+D:\Usmonov Shohruxmiroz's Projects\C#\c-sharp\Lessons\Exceptions\Exceptions\bin\Debug\net8.0\Exceptions.runtimeconfig.json
+D:\Usmonov Shohruxmiroz's Projects\C#\c-sharp\Lessons\Exceptions\Exceptions\bin\Debug\net8.0\Exceptions.dll
+D:\Usmonov Shohruxmiroz's Projects\C#\c-sharp\Lessons\Exceptions\Exceptions\bin\Debug\net8.0\Exceptions.pdb
+D:\Usmonov Shohruxmiroz's Projects\C#\c-sharp\Lessons\Exceptions\Exceptions\obj\Debug\net8.0\Exceptions.GeneratedMSBuildEditorConfig.editorconfig
+D:\Usmonov Shohruxmiroz's Projects\C#\c-sharp\Lessons\Exceptions\Exceptions\obj\Debug\net8.0\Exceptions.AssemblyInfoInputs.cache
+D:\Usmonov Shohruxmiroz's Projects\C#\c-sharp\Lessons\Exceptions\Exceptions\obj\Debug\net8.0\Exceptions.AssemblyInfo.cs
+D:\Usmonov Shohruxmiroz's Projects\C#\c-sharp\Lessons\Exceptions\Exceptions\obj\Debug\net8.0\Exceptions.csproj.CoreCompileInputs.cache
+D:\Usmonov Shohruxmiroz's Projects\C#\c-sharp\Lessons\Exceptions\Exceptions\obj\Debug\net8.0\Exceptions.sourcelink.json
+D:\Usmonov Shohruxmiroz's Projects\C#\c-sharp\Lessons\Exceptions\Exceptions\obj\Debug\net8.0\Exceptions.dll
+D:\Usmonov Shohruxmiroz's Projects\C#\c-sharp\Lessons\Exceptions\Exceptions\obj\Debug\net8.0\refint\Exceptions.dll
+D:\Usmonov Shohruxmiroz's Projects\C#\c-sharp\Lessons\Exceptions\Exceptions\obj\Debug\net8.0\Exceptions.pdb
+D:\Usmonov Shohruxmiroz's Projects\C#\c-sharp\Lessons\Exceptions\Exceptions\obj\Debug\net8.0\Exceptions.genruntimeconfig.cache
+D:\Usmonov Shohruxmiroz's Projects\C#\c-sharp\Lessons\Exceptions\Exceptions\obj\Debug\net8.0\ref\Exceptions.dll
