@@ -1,0 +1,15 @@
+D:\Usmonov Shohruxmirozs Projects\C#\c-sharp\Projects\ManageSmallLibrary\bin\Debug\net9.0\ManageSmallLibrary.exe
+D:\Usmonov Shohruxmirozs Projects\C#\c-sharp\Projects\ManageSmallLibrary\bin\Debug\net9.0\ManageSmallLibrary.deps.json
+D:\Usmonov Shohruxmirozs Projects\C#\c-sharp\Projects\ManageSmallLibrary\bin\Debug\net9.0\ManageSmallLibrary.runtimeconfig.json
+D:\Usmonov Shohruxmirozs Projects\C#\c-sharp\Projects\ManageSmallLibrary\bin\Debug\net9.0\ManageSmallLibrary.dll
+D:\Usmonov Shohruxmirozs Projects\C#\c-sharp\Projects\ManageSmallLibrary\bin\Debug\net9.0\ManageSmallLibrary.pdb
+D:\Usmonov Shohruxmirozs Projects\C#\c-sharp\Projects\ManageSmallLibrary\obj\Debug\net9.0\ManageSmallLibrary.GeneratedMSBuildEditorConfig.editorconfig
+D:\Usmonov Shohruxmirozs Projects\C#\c-sharp\Projects\ManageSmallLibrary\obj\Debug\net9.0\ManageSmallLibrary.AssemblyInfoInputs.cache
+D:\Usmonov Shohruxmirozs Projects\C#\c-sharp\Projects\ManageSmallLibrary\obj\Debug\net9.0\ManageSmallLibrary.AssemblyInfo.cs
+D:\Usmonov Shohruxmirozs Projects\C#\c-sharp\Projects\ManageSmallLibrary\obj\Debug\net9.0\ManageSmallLibrary.csproj.CoreCompileInputs.cache
+D:\Usmonov Shohruxmirozs Projects\C#\c-sharp\Projects\ManageSmallLibrary\obj\Debug\net9.0\ManageSmallLibrary.sourcelink.json
+D:\Usmonov Shohruxmirozs Projects\C#\c-sharp\Projects\ManageSmallLibrary\obj\Debug\net9.0\ManageSmallLibrary.dll
+D:\Usmonov Shohruxmirozs Projects\C#\c-sharp\Projects\ManageSmallLibrary\obj\Debug\net9.0\refint\ManageSmallLibrary.dll
+D:\Usmonov Shohruxmirozs Projects\C#\c-sharp\Projects\ManageSmallLibrary\obj\Debug\net9.0\ManageSmallLibrary.pdb
+D:\Usmonov Shohruxmirozs Projects\C#\c-sharp\Projects\ManageSmallLibrary\obj\Debug\net9.0\ManageSmallLibrary.genruntimeconfig.cache
+D:\Usmonov Shohruxmirozs Projects\C#\c-sharp\Projects\ManageSmallLibrary\obj\Debug\net9.0\ref\ManageSmallLibrary.dll
