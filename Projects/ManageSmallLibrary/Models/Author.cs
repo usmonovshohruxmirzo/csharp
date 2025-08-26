@@ -1,4 +1,3 @@
-
 namespace ManageSmallLibrary.Models
 {
     public class Author
