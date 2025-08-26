@@ -1,2 +1,47 @@
-.vs
-.idea
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Rider / IntelliJ IDEA
+.idea/
+
+# Build folders
+**/bin/
+**/obj/
+**/out/
+
+# NuGet
+*.nupkg
+*.snupkg
+packages/
+.nuget/
+
+# Logs
+*.log
+*.tlog
+
+# OS generated files
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Temporary files
+*.tmp
+*.temp
+*.cache
+
+# Resharper
+_ReSharper*/
+*.DotSettings.user
+
+# DotCover
+*.dotCover
+
+# Entity Framework
+Migrations/
+
+# Test result folders
+TestResults/
