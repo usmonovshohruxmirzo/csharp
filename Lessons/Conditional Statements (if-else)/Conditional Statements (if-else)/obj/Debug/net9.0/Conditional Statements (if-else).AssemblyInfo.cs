@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Conditional Statements (if-else)")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+940b1cfe393c1411f72dbdfb836d99f29430f0d6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c1e7528c0a389573737daafe9cadac561c511fc6")]
 [assembly: System.Reflection.AssemblyProductAttribute("Conditional Statements (if-else)")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Conditional Statements (if-else)")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

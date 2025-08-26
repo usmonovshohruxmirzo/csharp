@@ -213,8 +213,9 @@ Console.WriteLine("==== Join ====");
 var orders = new[] { new { Id = 1, CustomerId = 1 }, new { Id = 2, CustomerId = 2 } };
 var customers = new[] { new { Id = 1, Name = "Alice" }, new { Id = 2, Name = "Alex" } };
 var join = orders.Join(customers, o => o.CustomerId, c => c.Id, (o, c) => new { o.Id, c.Name });
-foreach(var c in join){
-  Console.WriteLine("Id: {0}, Name: {1}", c.Id, c.Name);
+foreach (var c in join)
+{
+    Console.WriteLine("Id: {0}, Name: {1}", c.Id, c.Name);
 }
 
 
@@ -222,15 +223,15 @@ foreach(var c in join){
 
 Console.WriteLine("==== Take / Skip ====");
 var first3 = numbers.Take(3);
-foreach(int n in first3)
+foreach (int n in first3)
 {
-  Console.WriteLine(n);
+    Console.WriteLine(n);
 }
 
 var skip3 = numbers.Skip(3);
-foreach(int n in skip3)
+foreach (int n in skip3)
 {
-  Console.WriteLine(n);
+    Console.WriteLine(n);
 }
 
 // Miscellaneous =================
@@ -240,5 +241,21 @@ Console.WriteLine("==== Take / Skip ====");
 var rev = numbers.Reverse();
 foreach (var n in rev)
 {
-  Console.Write(n + " ");
+    Console.Write(n + " ");
+}
+
+Console.WriteLine();
+Console.WriteLine();
+var combined = a.Concat(b);
+foreach (var n in combined)
+{
+    Console.Write(n + " ");
+}
+
+Console.WriteLine();
+var empty = new int[] { };
+var result = empty.DefaultIfEmpty(100);
+foreach (var num in result)
+{
+  Console.WriteLine(num);
 }
