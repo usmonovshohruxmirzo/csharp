@@ -1,0 +1,15 @@
+D:\Usmonov Shohruxmirozs Projects\C#\c-sharp\Lessons\LINQ\bin\Debug\net9.0\LINQ.exe
+D:\Usmonov Shohruxmirozs Projects\C#\c-sharp\Lessons\LINQ\bin\Debug\net9.0\LINQ.deps.json
+D:\Usmonov Shohruxmirozs Projects\C#\c-sharp\Lessons\LINQ\bin\Debug\net9.0\LINQ.runtimeconfig.json
+D:\Usmonov Shohruxmirozs Projects\C#\c-sharp\Lessons\LINQ\bin\Debug\net9.0\LINQ.dll
+D:\Usmonov Shohruxmirozs Projects\C#\c-sharp\Lessons\LINQ\bin\Debug\net9.0\LINQ.pdb
+D:\Usmonov Shohruxmirozs Projects\C#\c-sharp\Lessons\LINQ\obj\Debug\net9.0\LINQ.GeneratedMSBuildEditorConfig.editorconfig
+D:\Usmonov Shohruxmirozs Projects\C#\c-sharp\Lessons\LINQ\obj\Debug\net9.0\LINQ.AssemblyInfoInputs.cache
+D:\Usmonov Shohruxmirozs Projects\C#\c-sharp\Lessons\LINQ\obj\Debug\net9.0\LINQ.AssemblyInfo.cs
+D:\Usmonov Shohruxmirozs Projects\C#\c-sharp\Lessons\LINQ\obj\Debug\net9.0\LINQ.csproj.CoreCompileInputs.cache
+D:\Usmonov Shohruxmirozs Projects\C#\c-sharp\Lessons\LINQ\obj\Debug\net9.0\LINQ.sourcelink.json
+D:\Usmonov Shohruxmirozs Projects\C#\c-sharp\Lessons\LINQ\obj\Debug\net9.0\LINQ.dll
+D:\Usmonov Shohruxmirozs Projects\C#\c-sharp\Lessons\LINQ\obj\Debug\net9.0\refint\LINQ.dll
+D:\Usmonov Shohruxmirozs Projects\C#\c-sharp\Lessons\LINQ\obj\Debug\net9.0\LINQ.pdb
+D:\Usmonov Shohruxmirozs Projects\C#\c-sharp\Lessons\LINQ\obj\Debug\net9.0\LINQ.genruntimeconfig.cache
+D:\Usmonov Shohruxmirozs Projects\C#\c-sharp\Lessons\LINQ\obj\Debug\net9.0\ref\LINQ.dll

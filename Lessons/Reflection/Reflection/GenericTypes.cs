@@ -13,7 +13,7 @@ namespace GenericTypes
             Type[] typeParams1 = listDef.GetGenericArguments();
             Console.WriteLine(typeParams1[0].Name);
             Console.WriteLine(typeParams1[0].IsGenericTypeDefinition);
-            
+
             // 1️⃣ Open generic type: List<>
             Type openList = typeof(List<>);
             Console.WriteLine($"IsGenericType: {openList.IsGenericType}");
@@ -82,5 +82,5 @@ namespace GenericTypes
     }
 
     // Example generic class with constraints
-    public class Constrained<T> where T : class, new() {}
+    public class Constrained<T> where T : class, new() { }
 }
