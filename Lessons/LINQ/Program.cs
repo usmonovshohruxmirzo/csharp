@@ -31,8 +31,6 @@ foreach (var s in squares)
     Console.WriteLine(s);
 }
 
-// BUG: Should review this concept
-
 Console.WriteLine("==== SelectMany ====");
 string[] words = { "hello", "world" };
 var letters = words.SelectMany(w => w.ToCharArray());
@@ -41,6 +39,25 @@ foreach (var c in letters)
     Console.Write(c + " ");
 }
 
+var students = new[]
+{
+    new { Name = "Ali", Subjects = new[] { "Math", "Physics" } },
+    new { Name = "Sara", Subjects = new[] { "Biology", "Chemistry" } }
+};
+
+var selectResult = students.Select(student => student.Subjects);
+Console.WriteLine("Select Result:");
+foreach (var subject in selectResult)
+{
+    Console.WriteLine($"[{string.Join(", ", subject)}]");
+}
+
+var selectManyResult = students.SelectMany(s => s.Subjects);
+Console.WriteLine("\nSelectMany Result:");
+foreach (var subject in selectManyResult)
+{
+    Console.WriteLine(subject);
+}
 
 // Ordering Methods =================
 // Purpose: Sort elements.
@@ -62,7 +79,6 @@ foreach (var i in desc)
 }
 
 // ThenBy / ThenByDescending: Secondary sorting.
-// BUG: Should review
 Console.WriteLine("\n\n ==== ThenBy / ThenByDescending ====");
 
 var people = new[]
@@ -84,13 +100,12 @@ foreach (var p in sortedPeople)
 
 
 // Grouping Methods =================
-// BUG: Should review
 Console.WriteLine("\n\n ==== GroupBy ====");
 var grouped = people.GroupBy(p => p.Age);
 foreach (var group in grouped)
 {
     Console.WriteLine($"Age: {group.Key}");
-    foreach (var p in group) Console.WriteLine(p.Name);
+    foreach (var p in group) Console.WriteLine("- " + p.Name);
 }
 
 
@@ -257,5 +272,5 @@ var empty = new int[] { };
 var result = empty.DefaultIfEmpty(100);
 foreach (var num in result)
 {
-  Console.WriteLine(num);
+    Console.WriteLine(num);
 }
