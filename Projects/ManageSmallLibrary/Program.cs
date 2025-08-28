@@ -133,8 +133,27 @@ namespace ManageSmallLibrary
             // 11) Partitioning
             H("11) Partitioning");
             var first3Books = books.Take(3);
-            var skip2Member = members.Skip(2);
+            var skip2Members = members.Skip(2);
             var takeWhileUnder400 = books.TakeWhile(b => b.Pages < 400).Select(b => b.Title);
+            Console.WriteLine("First 3 books:"); Print(first3Books.Select(b => b.Title));
+            Console.WriteLine("Skip first 2 members:"); Print(skip2Members.Select(m => m.Name));
+            Console.WriteLine("Take while pages < 400 (stops at first >= 400):"); Print(takeWhileUnder400);
+
+            // 12) Misc
+            H("12) Misc");
+            var reversedTitles = books.Reverse().Select(b => b.Title);
+            Console.WriteLine("Reversed book titles:");
+            Print(reversedTitles);
+            var titlePart1 = books.Take(2).Select(b => b.Title);
+            var titlePart2 = books.Take(2).Select(b => b.Title);
+            var concatenated = titlePart1.Concat(titlePart2);
+            Console.WriteLine("Concatenated titles:");
+            Print(concatenated);
+            var safeDefault = books
+              .Where(b => b.PublishedYear < 1900)
+              .DefaultIfEmpty(new Book { Id = 0, Title = "(None)", Pages = 0, AuthorId = 0, PublishedYear = 0 });
+            Console.WriteLine("DefaultIfEmpty demo:");
+            Print(safeDefault.Select(b => $"{b.Title} ({b.PublishedYear})"));
         }
     }
 }
