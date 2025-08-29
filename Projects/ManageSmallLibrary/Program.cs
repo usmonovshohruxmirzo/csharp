@@ -77,7 +77,6 @@ namespace ManageSmallLibrary
             double avgPages = books.Average(b => b.Pages);
             int maxPages = books.Max(b => b.Pages);
             var bookWithMax = books.OrderByDescending(b => b.Pages).First();
-            // FIX: Review next line
             long productYears = books.Select(b => (long)b.PublishedYear).Aggregate(1L, (acc, y) => acc * y);
             Console.WriteLine($"Count: {totalBooks}");
             Console.WriteLine($"Sum pages: {totalPages}");
@@ -86,7 +85,6 @@ namespace ManageSmallLibrary
             Console.WriteLine($"Product of all PublishedYear (long): {productYears}");
 
             // 8) Set operations
-            // FIX: Review all 
             H("8) Set Operations");
             var distinctBorrowed = members.SelectMany(m => m.BorrowedBookIds).Distinct();
             var commonBorrowedAll = members
@@ -107,7 +105,6 @@ namespace ManageSmallLibrary
             foreach (var kv in authorDict) Console.WriteLine($"{kv.Key} -> {kv.Value}");
 
             // 10) Joining
-            // FIX: review All
             H("10) Joining");
             var bookWithAuthor = books.Join(
                 authors,
