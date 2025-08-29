@@ -154,6 +154,28 @@ namespace ManageSmallLibrary
               .DefaultIfEmpty(new Book { Id = 0, Title = "(None)", Pages = 0, AuthorId = 0, PublishedYear = 0 });
             Console.WriteLine("DefaultIfEmpty demo:");
             Print(safeDefault.Select(b => $"{b.Title} ({b.PublishedYear})"));
+
+            // 13)
+            H("13) Challenge (combined)");
+            var challenge = members
+                .Where(m => m.Age > 20)
+                .Select(m => new
+                {
+                    m.Name,
+                    m.Age,
+                    Titles = m.BorrowedBookIds
+                        .Join(books, id => id, b => b.Id, (id, b) => b)
+                        .Where(b => b.Pages > 300)
+                        .Select(b => b.Title)
+                        .ToList()
+                })
+                .Where(x => x.Titles.Any())
+                .OrderBy(x => x.Age);
+
+            foreach (var x in challenge)
+            {
+                Console.WriteLine($"{x.Name} ({x.Age}) -> {string.Join(", ", x.Titles)}");
+            }
         }
     }
 }
