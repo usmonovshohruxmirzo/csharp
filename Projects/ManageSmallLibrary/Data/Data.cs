@@ -22,9 +22,9 @@ namespace ManageSmallLibrary
 
         public static readonly Member[] Members = new Member[]
         {
-            new Member { Id = 1, Name = "John", Age = 25, BorrowedBookIds = new int[] { 1, 3 } },
-            new Member { Id = 2, Name = "Emma", Age = 30, BorrowedBookIds = new int[] { 2, 5 } },
-            new Member { Id = 3, Name = "Mike", Age = 22, BorrowedBookIds = new int[] { 4 } }
+            new Member { Id = 1, Name = "John", Age = 25, BorrowedBookIds = new int[] { 1, 2, 3, 4 } },
+            new Member { Id = 2, Name = "Emma", Age = 30, BorrowedBookIds = new int[] { 2, 3, 4, 5 } },
+            new Member { Id = 3, Name = "Mike", Age = 22, BorrowedBookIds = new int[] { 2, 4, 6, 7 } }
         };
     }
 }
