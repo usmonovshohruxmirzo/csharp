@@ -1,2 +1,13 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using ObjectOrientedProgramming.Concepts;
+
+namespace ObjectOrientedProgramming
+{
+    public class Program
+    {
+        static void Main()
+        {
+            Classes.RunClasses();
+        }
+    }
+
+}
