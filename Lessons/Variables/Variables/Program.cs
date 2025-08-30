@@ -52,3 +52,30 @@ string _name = "Tom"; // Valid
 int @class = 10;    // Valid (Using @ to escape keywords)
 
 Console.WriteLine($"""{age1} {_name} {@class}""");
+
+// Declaring  implicit variable
+var vx = "Hello";
+var vz = 1212;
+Console.WriteLine("{0}, {1}", vx, vz);
+
+// Declaring array of values
+int[] vals = new int[5];
+string[] strs = { "one", "two", "three" };
+
+Console.WriteLine("{0}, {1}, {2}", x, vx, vz);
+
+// null (no value)
+object obj1 = null;
+Console.WriteLine(obj1);
+
+// implicit conversion between types
+long bigNum;
+bigNum = vz;
+
+// explicit conversion
+float vz_to_f = (float)vz;
+Console.WriteLine("{0}", vz_to_f);
+
+float fnum = 5.8f;
+int fnum_to_int = (int)fnum;
+Console.WriteLine(fnum_to_int);
