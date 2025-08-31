@@ -117,6 +117,19 @@
                 Console.WriteLine(n);
             }
 
+
+            string? inputStr = "";
+            // while(inputStr != "exit")
+            // {
+            //   inputStr = Console.ReadLine();
+            //   Console.WriteLine("you entered: {0}", inputStr);
+            // }
+            do
+            {
+                inputStr = Console.ReadLine();
+                Console.WriteLine("you entered: {0}", inputStr);
+            } while (inputStr != "exit");
+
         }
 
         static void GuessingGame()

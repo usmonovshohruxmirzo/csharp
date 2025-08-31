@@ -4,9 +4,9 @@
     {
         public static void Main()
         {
-            //HandleDivisionByZero();
+            HandleDivisionByZero();
             //HandleExceptionWithFilter();
-            CustomExceptions();
+            // CustomExceptions();
         }
 
         static void HandleDivisionByZero()
