@@ -1,5 +1,4 @@
-﻿
-void DisplayWeatherReport(double tempInCelsius)
+﻿void DisplayWeatherReport(double tempInCelsius)
 {
     if (tempInCelsius < 20.0)
     {
@@ -49,6 +48,10 @@ DisplayCharacter('A');
 DisplayCharacter('v');
 DisplayCharacter('8');
 
+int theVal = 10;
+Console.WriteLine(theVal < 50 ? "theVal is small" : "theVal is big");
+
+//  INFO: SWITCH CASE
 void DisplayMeasurement_Switch(double measurement)
 {
     switch (measurement)
@@ -182,5 +185,4 @@ Console.WriteLine(GetTemperatureCategory(-5));
 Console.WriteLine(GetTemperatureCategory(8));
 Console.WriteLine(GetTemperatureCategory(22));
 Console.WriteLine(GetTemperatureCategory(45));
-
 
