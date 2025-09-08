@@ -6,7 +6,9 @@ namespace ObjectOrientedProgramming
     {
         static void Main()
         {
-            Classes.RunClasses();
+            // Classes.RunClasses();
+
+            PrinciplesOfOOP.RunPrinciplesOfOOP();
         }
     }
 
