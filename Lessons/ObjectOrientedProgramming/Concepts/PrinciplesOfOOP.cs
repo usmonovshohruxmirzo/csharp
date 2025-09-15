@@ -9,39 +9,86 @@ namespace ObjectOrientedProgramming.Concepts
             SavingsAccount sa1 = new SavingsAccount("Alice", 10000, 5);
             CurrentAccount ca1 = new CurrentAccount("Bob", 5000);
 
-            bank.AddAccount(sa1);
-            bank.AddAccount(ca1);
+            // bank.AddAccount(sa1);
+            // bank.AddAccount(ca1);
 
             Space();
 
-            sa1.Deposit(2000);
-            sa1.Withdraw(500);
-            sa1.AddInterest();
+            // sa1.Deposit(2000);
+            // sa1.Withdraw(500);
+            // sa1.AddInterest();
+
+            Space();
+            //
+            // ca1.Withdraw(7000);
+            // ca1.Transfer(sa1, 2000);
 
             Space();
 
-            ca1.Withdraw(7000);
-            ca1.Transfer(sa1, 2000);
+            // Employee emp = new Employee("Charlie");
+            // emp.ViewAccount(sa1);
 
             Space();
 
-            Employee emp = new Employee("Charlie");
-            emp.ViewAccount(sa1);
+            // bank.ShowAllAccounts();
+            //
+            //
+            Student s1 = new Student();
+            s1.Introduce();
+            s1.ShowMajor();
+            Console.WriteLine();
 
-            Space();
-
-            bank.ShowAllAccounts();
+            Student s2 = new Student("Alice", 20, "Computer Science");
+            s2.Introduce();
+            s2.ShowMajor();
         }
 
         public static void Space()
         {
-          for (int i = 0; i < 2; i++)
-          {
-            Console.WriteLine("");
-          }
+            for (int i = 0; i < 2; i++)
+            {
+                Console.WriteLine("");
+            }
         }
     }
 }
+
+// INFO: this() and base()
+public class Person1
+{
+    public string Name { get; set; }
+    public int Age { get; set; }
+
+    public Person1(string name, int age)
+    {
+        this.Name = name;
+        this.Age = age;
+        Console.WriteLine("Person constructor called");
+    }
+
+    public void Introduce() => Console.WriteLine($"Hi, I,m {Name}, Age {Age} years old");
+
+}
+
+public class Student : Person1
+{
+    public string Major { get; set; }
+
+
+    public Student() : this("Unkown", 0, "Undeclared")
+    {
+        Console.WriteLine("Default Student constructor called");
+    }
+
+    public Student(string name, int age, string major) : base(name, age)
+    {
+        this.Major = major;
+        Console.WriteLine("Parameterized Student constructor called");
+    }
+
+    public void ShowMajor() => Console.WriteLine($"Major: {Major}");
+}
+
 
 // INFO: Bank Account =============================
 
