@@ -114,11 +114,48 @@ namespace FileSystem
             using (FileStream fs = new FileStream("data.bin", FileMode.Open))
             {
               int b;
-              while ((b = fs.ReadByte()) != -1)
+              while ((b = fs.ReadByte()) != -1) // Reads bytes until EOF (end of file) -1.
               {
                 Console.WriteLine((char)(b));
               }
             }
+
+           // INFO: StreamReader & StreamWriter 
+           H("StreamReader & StreamWriter");
+
+           using (StreamWriter sw = new StreamWriter("log.txt"))
+           {
+             sw.WriteLine("Log entry 1");
+             sw.WriteLine("Log entry 2");
+           }
+
+           using (StreamReader sr = new StreamReader("log.txt"))
+           {
+             string line;
+             while ((line = sr.ReadLine()) != null)
+             {
+               Console.WriteLine(line);
+             }
+           }
+
+           // INFO: BinaryReader & BinaryWriter
+           
+           // INFO: File Attributes & Security
+           
+           // INFO: FileSystemWatcher (Monitor Changes)
+           H("FileSystemWatcher (Monitor Changes)");
+           FileSystemWatcher watcher = new FileSystemWatcher();
+           watcher.Path = ".";
+           watcher.Filter = ".txt";
+           watcher.NotifyFilter = NotifyFilters.FileName | NotifyFilters.LastWrite;
+
+           watcher.Changed += (s, e) => Console.WriteLine($"Changed: {e.FullPath}");
+           watcher.Changed += (s, e) => Console.WriteLine($"Created: {e.FullPath}");
+           watcher.Changed += (s, e) => Console.WriteLine($"Deleted: {e.FullPath}");
+
+           watcher.EnableRaisingEvents = true;
+
+           Console.WriteLine("Watching folder... Press Enter to exit.");
 
         }
 
