@@ -28,6 +28,7 @@ namespace FileSystem
             H("Working with Files");
             string path = "example.txt";
 
+            File.SetAttributes("example.txt", FileAttributes.Normal);
             // Write text to a file (overwrites if exists)
             File.WriteAllText(path, "Hello, C# File System");
             Console.WriteLine("File created and text written.");
@@ -113,49 +114,73 @@ namespace FileSystem
             // Reading Bytes
             using (FileStream fs = new FileStream("data.bin", FileMode.Open))
             {
-              int b;
-              while ((b = fs.ReadByte()) != -1) // Reads bytes until EOF (end of file) -1.
-              {
-                Console.WriteLine((char)(b));
-              }
+                int b;
+                while ((b = fs.ReadByte()) != -1) // Reads bytes until EOF (end of file) -1.
+                {
+                    Console.WriteLine((char)(b));
+                }
             }
 
-           // INFO: StreamReader & StreamWriter 
-           H("StreamReader & StreamWriter");
+            // INFO: StreamReader & StreamWriter 
+            H("StreamReader & StreamWriter");
 
-           using (StreamWriter sw = new StreamWriter("log.txt"))
-           {
-             sw.WriteLine("Log entry 1");
-             sw.WriteLine("Log entry 2");
-           }
+            using (StreamWriter sw = new StreamWriter("log.txt"))
+            {
+                sw.WriteLine("Log entry 1");
+                sw.WriteLine("Log entry 2");
+            }
 
-           using (StreamReader sr = new StreamReader("log.txt"))
-           {
-             string line;
-             while ((line = sr.ReadLine()) != null)
-             {
-               Console.WriteLine(line);
-             }
-           }
+            using (StreamReader sr = new StreamReader("log.txt"))
+            {
+                string line;
+                while ((line = sr.ReadLine()) != null)
+                {
+                    Console.WriteLine(line);
+                }
+            }
 
-           // INFO: BinaryReader & BinaryWriter
-           
-           // INFO: File Attributes & Security
-           
-           // INFO: FileSystemWatcher (Monitor Changes)
-           H("FileSystemWatcher (Monitor Changes)");
-           FileSystemWatcher watcher = new FileSystemWatcher();
-           watcher.Path = ".";
-           watcher.Filter = ".txt";
-           watcher.NotifyFilter = NotifyFilters.FileName | NotifyFilters.LastWrite;
+            // INFO: BinaryReader & BinaryWriter
+            H("BinaryReader & BinaryWriter");
+            using (BinaryWriter bw = new BinaryWriter(File.Open("numbers.dat", FileMode.Create)))
+            {
+                bw.Write(42);
+                bw.Write(3.14);
+                bw.Write("Hello C#");
+            }
 
-           watcher.Changed += (s, e) => Console.WriteLine($"Changed: {e.FullPath}");
-           watcher.Changed += (s, e) => Console.WriteLine($"Created: {e.FullPath}");
-           watcher.Changed += (s, e) => Console.WriteLine($"Deleted: {e.FullPath}");
+            using (BinaryReader br = new BinaryReader(File.Open("numbers.dat", FileMode.Open)))
+            {
+                Console.WriteLine(br.ReadInt32());
+                Console.WriteLine(br.ReadDouble());
+                Console.WriteLine(br.ReadString());
+            }
 
-           watcher.EnableRaisingEvents = true;
+            // INFO: File Attributes & Security
+            //
+            // H("File Attributes & Security");
+            // File.SetAttributes("example.txt", FileAttributes.ReadOnly);
+            // FileAttributes attr = File.GetAttributes("example.txt");
+            // if ((attr & FileAttributes.ReadOnly) == FileAttributes.ReadOnly)
+            // {
+            //   Console.WriteLine("File is ReadOnly");
+            // }
 
-           Console.WriteLine("Watching folder... Press Enter to exit.");
+            // INFO: FileSystemWatcher (Monitor Changes)
+            //
+            // H("FileSystemWatcher (Monitor Changes)");
+            // FileSystemWatcher watcher = new FileSystemWatcher();
+            // watcher.Path = ".";
+            // watcher.Filter = "*.txt";
+            // watcher.NotifyFilter = NotifyFilters.FileName | NotifyFilters.LastWrite;
+            //
+            // watcher.Changed += (s, e) => Console.WriteLine($"Changed: {e.FullPath}");
+            // watcher.Created += (s, e) => Console.WriteLine($"Created: {e.FullPath}");
+            // watcher.Deleted += (s, e) => Console.WriteLine($"Deleted: {e.FullPath}");
+            //
+            // watcher.EnableRaisingEvents = true;
+            //
+            // Console.WriteLine("Watching folder... Press Enter to exit.");
+            // Console.ReadLine();
 
         }
 
