@@ -11,6 +11,29 @@ namespace ObjectOrientedProgramming.Concepts
             c.SoundHorn();
             Console.WriteLine(m);
             m.SoundHorn();
+
+            var collection = new StringCollection();
+
+            collection[0] = "   Apple   ";
+            collection[1] = "Banana";
+            collection[2] = "Cherry";
+
+            Console.WriteLine(collection[0]); // Apple (trimmed)
+            Console.WriteLine(collection[1]); // Banana
+            Console.WriteLine(collection[2]); // Cherry
+            Console.WriteLine("Length: " + collection.Length); // 3
+
+            // Reverse lookup by string
+            Console.WriteLine("Index of 'Banana': " + collection["Banana"]); // 1
+            Console.WriteLine("Index of 'Mango': " + collection["Mango"]);   // -1
+
+            // Auto resize works
+            collection[20] = "Orange";
+            Console.WriteLine(collection[20]); // Orange
+            Console.WriteLine("Length: " + collection.Length); // 21
+
+            // Out of range safe read
+            Console.WriteLine(collection[100]); // [Index out of range]
         }
     }
 }
@@ -62,5 +85,66 @@ public class Motorcycle : Vehicle
     public override void SoundHorn()
     {
         Console.WriteLine("Honk Honk");
+    }
+}
+
+public abstract class CollectionBase
+{
+    public abstract string this[int index] { get; set; }
+}
+
+public class StringCollection : CollectionBase
+{
+    private string[] items;
+
+    public int Length { get; private set; } = 0;
+
+    public StringCollection(int capacity = 5)
+    {
+        items = new string[capacity];
+    }
+
+    // Indexer: access by int
+    public override string this[int index]
+    {
+        get
+        {
+            if (index < 0 || index >= Length)
+            {
+                return "[Index out of range]";
+            }
+
+            return items[index] ?? "[null]";
+        }
+        set
+        {
+            if (index < 0)
+            {
+                throw new ArgumentOutOfRangeException(nameof(index));
+            }
+
+            // Auto expand if needed
+            if (index >= items.Length)
+            {
+                Array.Resize(ref items, items.Length * 2);
+            }
+
+            items[index] = (value ?? "").Trim();
+            if (index >= Length) Length = index + 1;
+        }
+    }
+
+    // Extra indexer: access by string (reverse lookup)
+    public int this[string value]
+    {
+        get
+        {
+            value = value?.Trim() ?? "";
+            for (int i = 0; i < Length; i++)
+            {
+                if (items[i] == value) return i;
+            }
+            return -1; // not found
+        }
     }
 }
