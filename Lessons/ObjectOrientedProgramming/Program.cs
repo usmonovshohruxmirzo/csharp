@@ -8,7 +8,8 @@ namespace ObjectOrientedProgramming
         {
             // Classes.RunClasses();
             // PrinciplesOfOOP.RunPrinciplesOfOOP();
-            Inheritance.RunInheritance();
+            // Inheritance.RunInheritance();
+            AbstractClasses.RunAbstractClasses();
         }
     }
 
