@@ -88,6 +88,8 @@ public class Motorcycle : Vehicle
     }
 }
 
+// INFO: Abstract Indexers
+//
 public abstract class CollectionBase
 {
     public abstract string this[int index] { get; set; }
@@ -147,4 +149,21 @@ public class StringCollection : CollectionBase
             return -1; // not found
         }
     }
+}
+
+// INFO: Abstract Events
+// 
+public abstract class ButtonBase
+{
+  public abstract event EventHandler Click;
+}
+
+public class Button : ButtonBase
+{
+  public override event EventHandler Click;
+
+  public void SimulateClick()
+  {
+    Click?.Invoke(this, EventArgs.Empty);
+  }
 }
