@@ -1,4 +1,5 @@
 ﻿using ObjectOrientedProgramming.Concepts;
+using System.Diagnostics.CodeAnalysis;
 
 namespace ObjectOrientedProgramming
 {
@@ -28,6 +29,11 @@ namespace ObjectOrientedProgramming
             Console.WriteLine($"{myObj.GetType().GetProperty("Name") != null}");
             Console.WriteLine($"{myObj.GetType().GetProperty("Job") != null}");
 
+
+            Person person = new Person() { FirstName = "John", LastName = "Doe", ID = 1, Job = "Software Engineer" };
+            Person person1 = new Person() { FirstName = "John", LastName = "Doe", ID = 1, Job = "Software Engineer" };
+            Person person3 = new Person("John", "Doe", 2, "Doctor");
+
             // Classes.RunClasses();
             // PrinciplesOfOOP.RunPrinciplesOfOOP();
             // Inheritance.RunInheritance();
@@ -35,4 +41,25 @@ namespace ObjectOrientedProgramming
         }
     }
 
+
+    public class Person
+    {
+        public Person() { }
+
+        [SetsRequiredMembers]
+        public Person(string fname, string lname, int id, string job)
+        {
+            ID = id;
+            FirstName = fname;
+            LastName = lname;
+            Job = job;
+        }
+
+        public required int ID { get; init; }
+        public required string? FirstName { get; set; }
+        public required string LastName { get; set; }
+        public required string Job { get; set; }
+
+        public override string ToString() => $"{FirstName} {LastName}, ID: {ID}, JOB: {Job}";
+    }
 }
