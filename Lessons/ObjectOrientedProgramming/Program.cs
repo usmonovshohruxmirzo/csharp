@@ -38,6 +38,7 @@ namespace ObjectOrientedProgramming
             // PrinciplesOfOOP.RunPrinciplesOfOOP();
             // Inheritance.RunInheritance();
             // AbstractClasses.RunAbstractClasses();
+            StaticClasses.RunStaticClasses();
         }
     }
 
