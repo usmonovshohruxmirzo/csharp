@@ -7,7 +7,15 @@ namespace MyNamespace
         static void Main(string[] args)
         {
             // NonGenericCollections.Run();
-            GenericCollections.Run();
+            // GenericCollections.Run();
+            TodoList<string> todoList = new TodoList<string>();
+            todoList.Add("Hello");
+            todoList.Add("Hello 2");
+            todoList.Add("Hello 3");
+            todoList.Add("Hello 4");
+            // todoList.Remove("Hello");
+            todoList.Update("Hello", "Updated");
+            todoList.Display();
         }
     }
 }
@@ -112,46 +120,47 @@ class GenericCollections
         Console.WriteLine($"\nAfter Clear: Count = {cars.Count}");
 
         // INFO: CAPACITY
+        // Growth Pattern: Usually, the new capacity is double the old one (exponential growth), though it can differ slightly between .NET versions.
 
-        List<string> cars2 = new List<string>(100);
+        List<string> cars2 = new List<string>(2);
         Console.WriteLine($"Initial Capacity: {cars.Capacity}");
         Console.WriteLine($"Initial Count: {cars.Count}");
         cars2.Add("Honda");
         cars2.Add("Toyota");
-        cars2.Add("Toyota");
-        cars2.Add("Toyota");
-        cars2.Add("Toyota");
-        cars2.Add("Toyota");
-        cars2.Add("Toyota");
-        cars2.Add("Toyota");
-        cars2.Add("Toyota");
-        cars2.Add("Toyota");
-        cars2.Add("Toyota");
-        cars2.Add("Toyota");
-        cars2.Add("Toyota");
-        cars2.Add("Toyota");
-        cars2.Add("Toyota");
-        cars2.Add("Toyota");
-        cars2.Add("Toyota");
-        cars2.Add("Toyota");
-        cars2.Add("Toyota");
-        cars2.Add("Toyota");
-        cars2.Add("Toyota");
-        cars2.Add("Toyota");
-        cars2.Add("Toyota");
         Console.WriteLine($"After Adding 2: Count = {cars2.Count}, Capacity = {cars2.Capacity}");
-        
+
         Console.WriteLine(new string('A', 10));
+
+        List<int> numbers = new List<int>();
+
+        for (int i = 1; i <= 20; i++)
+        {
+            numbers.Add(i);
+            Console.WriteLine($"Count: {numbers.Count}, Capacity: {numbers.Capacity}");
+        }
+        numbers.Capacity = 1000;
+        Console.WriteLine(numbers.Capacity);
+        numbers.TrimExcess();
+        Console.WriteLine(numbers.Capacity);
+
+
+        // Cast<T>() is a LINQ method that converts all elements in a collection to a specific type.
+        Console.WriteLine("========== Cast");
+        ArrayList castNums = new ArrayList { 1, 2, 3, 4, 5, 6 };
+        var casted = castNums.Cast<int>();
+        Display<int>(casted.ToList());
+        Console.WriteLine();
+        Console.WriteLine(castNums[0]?.GetType());
     }
 
-     public static void Display<T>(List<T> list)
+    public static void Display<T>(List<T> list)
     {
         Console.ForegroundColor = ConsoleColor.Cyan;
         Console.Write(string.Join(", ", list));
         Console.ResetColor();
     }
 
-     public static void Display(List<string> list)
+    public static void Display(List<string> list)
     {
         Console.ForegroundColor = ConsoleColor.Cyan;
         Console.Write(string.Join(", ", list));
@@ -163,3 +172,43 @@ class GenericCollections
         Console.WriteLine(cars.Count());
     }
 }
+
+class TodoList<T>
+{
+    private List<T> todos = new List<T>();
+
+    public TodoList()
+    {
+    }
+
+    public void Display()
+    {
+        foreach (var item in todos)
+        {
+            Console.WriteLine("ID: {0}, TODO: {1}", todos.IndexOf(item), item);
+        }
+    }
+
+    public void Add(T value)
+    {
+      todos.Add(value);
+    }
+
+    public void Remove(T value)
+    {
+      todos.Remove(value);
+    }
+
+    public void Clear()
+    {
+      todos.Clear();
+    }
+
+    public void Update(T old, T @new)
+    {
+      todos[todos.IndexOf(old)] = @new;
+    }
+}
+
+
+// WARN: IF list all elements are same e.g "Hello" IndexOf always reutns 0
