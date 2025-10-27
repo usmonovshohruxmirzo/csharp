@@ -7,15 +7,20 @@ namespace MyNamespace
         static void Main(string[] args)
         {
             // NonGenericCollections.Run();
-            // GenericCollections.Run();
-            TodoList<string> todoList = new TodoList<string>();
-            todoList.Add("Hello");
-            todoList.Add("Hello 2");
-            todoList.Add("Hello 3");
-            todoList.Add("Hello 4");
+            // ListClass.Run();
+
+            // TodoList<string> todoList = new TodoList<string>();
+            // todoList.Add("Hello");
+            // todoList.Add("Hello 2");
+            // todoList.Add("Hello 3");
+            // todoList.Add("Hello 4");
             // todoList.Remove("Hello");
-            todoList.Update("Hello", "Updated");
-            todoList.Display();
+            // todoList.Update("Hello", "Updated");
+            // todoList.Display();
+            //
+            //
+
+            QueueClass.Run();
         }
     }
 }
@@ -59,7 +64,7 @@ class NonGenericCollections
     }
 }
 
-class GenericCollections
+class ListClass
 {
     public static void Run()
     {
@@ -173,6 +178,76 @@ class GenericCollections
     }
 }
 
+class QueueClass // FIFO (First In, First Out)
+{
+    /*
+        | Operation | Time Complexity |
+        | --------- | --------------- |
+        | Enqueue   | O(1) amortized  |
+        | Dequeue   | O(1)            |
+        | Peek      | O(1)            |
+        | Contains  | O(n)            |
+        | ToArray   | O(n)            |
+  */
+    public static void Run()
+    {
+        Queue<string> cars = new Queue<string>();
+        cars.Enqueue("BMW");
+        cars.Enqueue("Audi");
+        cars.Enqueue("Tesla");
+
+        Console.Write(string.Join(" -> ", cars));
+
+        Console.WriteLine();
+        if (cars.Contains("Tesla")) Console.WriteLine("Tesla is in the queue");
+        
+        Console.WriteLine(cars.GetType());
+
+        string[] carArray = cars.ToArray();
+        Console.WriteLine(carArray.GetType());
+
+        Console.WriteLine(cars.Peek());
+
+        cars.Dequeue();
+
+        Console.WriteLine(cars.Peek());
+        Console.WriteLine(cars.Count);
+
+        cars.Clear();
+
+        // cars.Dequeue(); // Throws an error
+
+        // safer version of Dequeue
+        if (cars.TryDequeue(out string? car)) Console.WriteLine($"Removed: {car}");
+        else Console.WriteLine("Queue is empty");
+
+        if (cars.TryPeek(out string? peekCar)) Console.WriteLine($"Next: {peekCar}");
+        else Console.WriteLine("Queue is empty");
+
+        // INFO: EnsureCapacity
+        Queue<int> q = new Queue<int>();
+        Console.WriteLine("Initial queue count: " + q.Count);
+
+        for (int i = 1; i <= 10; i++)
+        {
+            q.Enqueue(i);
+        }
+        Console.WriteLine("Count after adding 10 items: " + q.Count);
+
+        q.EnsureCapacity(100);
+        Console.WriteLine("Ensured capacity for 100 items (internal, no resize needed until 100 added)");
+
+        for (int i = 11; i <= 100; i++)
+        {
+            q.Enqueue(i);
+        }
+        Console.WriteLine("Count after adding 100 items: " + q.Count);
+
+        q.Enqueue(101);
+        Console.WriteLine("Added 101st item, count: " + q.Count);
+    }
+}
+
 class TodoList<T>
 {
     private List<T> todos = new List<T>();
@@ -191,24 +266,23 @@ class TodoList<T>
 
     public void Add(T value)
     {
-      todos.Add(value);
+        todos.Add(value);
     }
 
     public void Remove(T value)
     {
-      todos.Remove(value);
+        todos.Remove(value);
     }
 
     public void Clear()
     {
-      todos.Clear();
+        todos.Clear();
     }
 
     public void Update(T old, T @new)
     {
-      todos[todos.IndexOf(old)] = @new;
+
+        // WARN: IF list all elements are same e.g "Hello" IndexOf always reutns 0
+        todos[todos.IndexOf(old)] = @new;
     }
 }
-
-
-// WARN: IF list all elements are same e.g "Hello" IndexOf always reutns 0
