@@ -20,7 +20,9 @@ namespace MyNamespace
             //
             //
 
-            QueueClass.Run();
+            // QueueClass.Run();
+            // StackClass.Run();
+            DictionaryClass.Run();
         }
     }
 }
@@ -69,7 +71,6 @@ class ListClass
     public static void Run()
     {
         Console.WriteLine("\n ============== List ============== \n");
-
         List<string> cars = new List<string> { "Tesla", "Ferrari", "Audi" };
 
         // INFO: ADD ELEMENTS
@@ -200,7 +201,7 @@ class QueueClass // FIFO (First In, First Out)
 
         Console.WriteLine();
         if (cars.Contains("Tesla")) Console.WriteLine("Tesla is in the queue");
-        
+
         Console.WriteLine(cars.GetType());
 
         string[] carArray = cars.ToArray();
@@ -245,6 +246,102 @@ class QueueClass // FIFO (First In, First Out)
 
         q.Enqueue(101);
         Console.WriteLine("Added 101st item, count: " + q.Count);
+    }
+}
+
+public class StackClass // LIFO (Last In, First Out)
+{
+    public static void Run()
+    {
+        Stack<int> stack = new Stack<int>();
+
+        stack.Push(1);
+        stack.Push(2);
+        stack.Push(3);
+
+        stack.Pop();
+
+        foreach (var item in stack)
+        {
+            Console.WriteLine(item);
+        }
+
+    }
+}
+
+public class DictionaryClass
+{
+    public static void Run()
+    {
+        Dictionary<int, string> users = new Dictionary<int, string>()
+        {
+            { 1, "Alice" },
+            { 2, "Bob" },
+        };
+
+        users[3] = "Charlie";
+        users.Add(4, "David");
+
+        if (!users.TryAdd(2, "Bobby"))
+        {
+            Console.WriteLine("Key 2 already exists, TryAdd failed.\n");
+        }
+
+        Display(users);
+
+        Console.WriteLine($"Contains key 2: {users.ContainsKey(2)}");
+        Console.WriteLine($"Contains value 'Alice': {users.ContainsValue("Alice")}\n");
+
+        Console.WriteLine($"Total users: {users.Count}\n");
+
+        if (users.TryGetValue(3, out string? name))
+        {
+            Console.WriteLine($"User with key 3: {name}\n");
+        }
+
+        Console.WriteLine("Values:");
+        foreach (var value in users.Values)
+            Console.WriteLine(value);
+        Console.WriteLine();
+
+        Console.WriteLine("Keys:");
+        foreach (var key in users.Keys)
+            Console.WriteLine(key);
+        Console.WriteLine();
+
+        users.Remove(4);
+        Console.WriteLine("After removing key 4:");
+        Display(users);
+
+        if (users.Remove(3, out string? removedValue))
+            Console.WriteLine($"Removed value: {removedValue}\n");
+
+        users.EnsureCapacity(100);
+
+        for (int i = 5; i <= 10; i++)
+            users[i] = $"User{i}";
+
+        Console.WriteLine("After bulk insert:");
+        Display(users);
+
+        KeyValuePair<int, string>[] pairs = new KeyValuePair<int, string>[users.Count];
+        ((ICollection<KeyValuePair<int, string>>)users).CopyTo(pairs, 0);
+
+        Console.WriteLine("Copied to array:");
+        foreach (var kv in pairs)
+            Console.WriteLine($"{kv.Key}: {kv.Value}");
+        Console.WriteLine();
+
+        users.Clear();
+        Console.WriteLine($"After Clear(): Count = {users.Count}");
+    }
+
+    public static void Display(Dictionary<int, string> users)
+    {
+        Console.WriteLine("Dictionary contents:");
+        foreach (var kvp in users)
+            Console.WriteLine($"ID: {kvp.Key}, Name: {kvp.Value}");
+        Console.WriteLine();
     }
 }
 
