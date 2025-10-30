@@ -22,7 +22,8 @@ namespace MyNamespace
 
             // QueueClass.Run();
             // StackClass.Run();
-            DictionaryClass.Run();
+            // DictionaryClass.Run();
+            HashSetClass.Run();
         }
     }
 }
@@ -342,6 +343,41 @@ public class DictionaryClass
         foreach (var kvp in users)
             Console.WriteLine($"ID: {kvp.Key}, Name: {kvp.Value}");
         Console.WriteLine();
+    }
+}
+
+class HashSetClass
+{
+    public static void Run()
+    {
+        HashSet<int> set = new HashSet<int>() { 1, 2, 3, 3, 2, 1 };
+
+        set.Add(7);
+        set.Add(8);
+        Display(set);
+
+        var set1 = new HashSet<int> { 1, 2, 3 };
+        var set2 = new HashSet<int> { 3, 4, 5 };
+        set1.UnionWith(set2);
+        Console.WriteLine("UnionWith: ");
+        Display(set1);
+
+        var set3 = new HashSet<int> { 1, 2, 3 };
+        var set4 = new HashSet<int> { 2, 3, 4 };
+        set3.IntersectWith(set4);
+        Console.WriteLine("IntersectWith");
+        Display(set3);
+
+        var set5 = new HashSet<int> { 1, 2, 3, 4 };
+        var set6 = new HashSet<int> { 2, 4 };
+        set5.ExceptWith(set6);
+        Console.WriteLine("ExceptWith");
+        Display(set5);
+    }
+
+    public static void Display(HashSet<int> set)
+    {
+        Console.WriteLine(string.Join(", ", set));
     }
 }
 
