@@ -373,6 +373,50 @@ class HashSetClass
         set5.ExceptWith(set6);
         Console.WriteLine("ExceptWith");
         Display(set5);
+
+        Console.WriteLine("SymmetricExceptWith");
+        var set7 = new HashSet<int> { 1, 2, 3 };
+        var set8 = new HashSet<int> { 3, 4, 5 };
+        set7.SymmetricExceptWith(set8); // Purpose: Keeps only elements that are in one set or the other, but not both.
+        Display(set7);
+
+
+        var set9 = new HashSet<int> { 1, 2 };
+        var set10 = new HashSet<int> { 1, 2, 3 };
+        Console.WriteLine(set9.IsSubsetOf(set10)); // Purpose: Checks if all elements in one set exist in another.
+        Console.WriteLine(set10.IsSupersetOf(set9)); // Purpose: Checks if current set contains all elements of another.
+
+        Console.WriteLine("===============");
+        var A = new HashSet<int> { 1, 2, 3, 4 };
+        var B = new HashSet<int> { 3, 4 };
+
+        // Proper Superset: A has all elements of B AND more
+        Console.WriteLine(A.IsProperSupersetOf(B));
+
+        // Proper Subset: B is contained in A AND smaller
+        Console.WriteLine(B.IsProperSubsetOf(A));
+
+        // Same elements = not proper
+        var C = new HashSet<int> { 1, 2, 3, 4, 5 };
+        Console.WriteLine(A.IsProperSupersetOf(C));
+        Console.WriteLine(A.IsProperSubsetOf(C));
+
+        Console.WriteLine("SetEquals");
+        var set11 = new HashSet<int> { 1, 2, 3 };
+        var set12 = new HashSet<int> { 3, 2, 1 };
+        Console.WriteLine(set3.SetEquals(set4));
+
+        // INFO: Proper Subset: “I am fully inside the other set and smaller.”
+        // INFO: Proper Superset: “I fully contain the other set and I’m bigger.”
+
+
+        var set13 = new HashSet<int> { 1, 2, 3 };
+        var set14 = new HashSet<int> { 3, 4, 5 };
+        var set15 = new HashSet<int> { 6, 7 };
+
+        // INFO: “Do these sets have at least one thing in common?”
+        Console.WriteLine(set13.Overlaps(set14)); // True (3 is common)
+        Console.WriteLine(set13.Overlaps(set15)); // False (no common elements)
     }
 
     public static void Display(HashSet<int> set)
