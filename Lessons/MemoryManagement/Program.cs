@@ -9,6 +9,7 @@
         {
             Console.WriteLine("Hello World");
             CreateStudent();
+            GarbageCollector.Run();
         }
 
         static void Calculate()
