@@ -8,6 +8,7 @@
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World");
+            CreateStudent();
         }
 
         static void Calculate()
@@ -16,5 +17,16 @@
             int b = 50; // stored in stack
             int result = a + b; // stored in stack
         }
+
+        static void CreateStudent()
+        {
+          Student student = new Student(); // reference `student` on stack, object on heap
+          student.Name = "Alex"; // field stored in heap
+          Console.WriteLine(student.Name);
+        }
+    }
+
+    class Student {
+      public string? Name;
     }
 }
