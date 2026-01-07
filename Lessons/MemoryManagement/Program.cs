@@ -7,9 +7,11 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World");
-            CreateStudent();
-            GarbageCollector.Run();
+            // CreateStudent();
+            // GarbageCollector.Run();
+            FileHandler fh = new FileHandler("test.txt");
+            fh.ReadFile();
+            fh.Dispose();
         }
 
         static void Calculate()
@@ -21,13 +23,14 @@
 
         static void CreateStudent()
         {
-          Student student = new Student(); // reference `student` on stack, object on heap
-          student.Name = "Alex"; // field stored in heap
-          Console.WriteLine(student.Name);
+            Student student = new Student(); // reference `student` on stack, object on heap
+            student.Name = "Alex"; // field stored in heap
+            Console.WriteLine(student.Name);
         }
     }
 
-    class Student {
-      public string? Name;
+    class Student
+    {
+        public string? Name;
     }
 }
