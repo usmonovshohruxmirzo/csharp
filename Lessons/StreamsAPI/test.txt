@@ -1,0 +1,17 @@
+Hello C#
+Hello C#
+Hello C#
+Hello C#
+Hello C#
+Hello C#
+Hello C#
+Hello, StreamWriter!
+Appending new content to file.
+Hello, StreamWriter!
+Appending new content to file.
+Hello, StreamWriter!
+Appending new content to file.
+Hello, StreamWriter!
+Appending new content to file.
+Hello, StreamWriter!
+Appending new content to file.
