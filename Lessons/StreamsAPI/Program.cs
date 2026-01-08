@@ -6,7 +6,8 @@ namespace StreamsAPI
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World");
+            SW.Run();
+            // SR.Run();
         }
     }
 }
