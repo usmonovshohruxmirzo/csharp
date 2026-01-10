@@ -5,20 +5,31 @@
         static void Main(string[] args)
         {
             Document d = new Document("Test Document");
-            d.Save();
-            d.Load();
+            // d.Save();
+            // d.Load();
+
+            if (d is IStoreable)
+            {
+                d.Save();
+            }
+
+            IStoreable istor = d as IStoreable;
+            if (istor != null)
+            {
+                istor.Load();
+            }
         }
     }
 }
 
-interface ISortable
+interface IStoreable
 {
     void Save();
     void Load();
     bool NeedsSave { get; set; }
 }
 
-class Document : ISortable
+class Document : IStoreable
 {
     private string name;
     public bool needsSave;
@@ -31,12 +42,12 @@ class Document : ISortable
 
     public void Save()
     {
-      Console.WriteLine("Saving the document");
+        Console.WriteLine("Saving the document");
     }
 
     public void Load()
     {
-      Console.WriteLine("Loading the document");
+        Console.WriteLine("Loading the document");
     }
 
     public bool NeedsSave
