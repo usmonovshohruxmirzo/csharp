@@ -22,6 +22,24 @@ namespace Interfaces
                 istor.Load();
                 d.Encrypt();
             }
+
+            IRandomizable randomizer = new Randomizer();
+            string str;
+            do
+            {
+                Console.WriteLine("Enter a number for the upper bound: ");
+                str = Console.ReadLine()!;
+
+                try
+                {
+                    double upperBound = Double.Parse(str);
+                    Console.WriteLine("Random number between 0 and {1}: {0}", randomizer.GetRandomNumber(upperBound), upperBound);
+                }
+                catch (Exception) { }
+
+            } while (str != "exit");
+            Console.WriteLine("\nHit Enter key to continue...");
+            Console.ReadKey();
         }
     }
 }
@@ -66,4 +84,15 @@ class Document : IStoreable, IEncryptable
         Console.WriteLine("Decrypting the document");
     }
 
+}
+
+class Randomizer : IRandomizable
+{
+
+    public double GetRandomNumber(double dUpperBound)
+    {
+        Random random = new Random();
+        double seed = random.NextDouble();
+        return seed * dUpperBound;
+    }
 }
