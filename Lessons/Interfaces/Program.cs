@@ -1,4 +1,6 @@
-﻿namespace Interfaces
+﻿using Interfaces.Models;
+
+namespace Interfaces
 {
     class Program
     {
@@ -11,25 +13,23 @@
             if (d is IStoreable)
             {
                 d.Save();
+                d.Decrypt();
             }
 
             IStoreable istor = d as IStoreable;
             if (istor != null)
             {
                 istor.Load();
+                d.Encrypt();
             }
         }
     }
 }
 
-interface IStoreable
-{
-    void Save();
-    void Load();
-    bool NeedsSave { get; set; }
-}
 
-class Document : IStoreable
+
+
+class Document : IStoreable, IEncryptable
 {
     private string name;
     public bool needsSave;
@@ -55,4 +55,15 @@ class Document : IStoreable
         get { return needsSave; }
         set { needsSave = value; }
     }
+
+    public void Encrypt()
+    {
+        Console.WriteLine("Encrypting the document");
+    }
+
+    public void Decrypt()
+    {
+        Console.WriteLine("Decrypting the document");
+    }
+
 }
