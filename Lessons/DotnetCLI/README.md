@@ -57,8 +57,6 @@ Watches files and automatically rebuilds/restarts on changes.
 
 Automatically formats code (C#, F#, VB) using .NET analyzers.
 
----
-
 ## Project modification commands
 
 ### `dotnet package add`
