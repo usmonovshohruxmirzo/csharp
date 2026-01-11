@@ -101,8 +101,6 @@ Lists project references.
 
 Removes a project reference.
 
----
-
 ## NuGet commands
 
 ### `dotnet nuget delete`
@@ -157,8 +155,6 @@ Signs NuGet packages.
 
 Explains **why** a dependency exists (dependency graph).
 
----
-
 ## Workload management commands
 
 > Workloads = mobile, MAUI, Android, iOS, WASM, etc.
@@ -207,8 +203,6 @@ Removes workloads.
 
 Searches available workloads.
 
----
-
 ## Advanced commands
 
 ### `dotnet sdk check`
@@ -230,8 +224,6 @@ Manages HTTPS development certificates.
 ### `dotnet install script`
 
 Installs .NET SDK or runtime via script (CI / automation).
-
----
 
 ## Tool management commands
 
