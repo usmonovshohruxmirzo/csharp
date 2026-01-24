@@ -1,0 +1,4 @@
+root = true
+
+[*.cs]
+dotnet_diagnostic.NUnit1033.severity = none
