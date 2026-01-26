@@ -1,12 +1,13 @@
 ﻿namespace Program
 {
-    class Program
+  class Program
+  {
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
-        {
-            // Currying.Run();
-            Delegates.Run();
-            ComposableDelegates.Run();
-        }
+      // Currying.Run();
+      // Delegates.Run();
+      // ComposableDelegates.Run();
+      MulticastDelegateExample.Run();
     }
+  }
 }
