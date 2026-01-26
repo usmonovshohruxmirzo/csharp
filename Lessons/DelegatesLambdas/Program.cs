@@ -6,6 +6,7 @@
         {
             // Currying.Run();
             Delegates.Run();
+            ComposableDelegates.Run();
         }
     }
 }
