@@ -18,9 +18,7 @@ namespace OrderProcessing.Tests
       IPaymentGateway stubPayment = new StubPaymentGateway(true);
 
       var fakeRepo = new FakeOrderRepository();
-
       var loggerMock = new Mock<ILogger>();
-
       var service = new OrderService(
           stubPayment,
           fakeRepo,
@@ -29,9 +27,11 @@ namespace OrderProcessing.Tests
 
       var result = service.PlaceOrder(new Order { Id = 1, Amount = 100 });
 
-      Assert.That(result, Is.True);
-
-      Assert.That(fakeRepo.Count(), Is.EqualTo(1));
+      Assert.Multiple(() =>
+      {
+        Assert.That(result, Is.True);
+        Assert.That(fakeRepo.Count(), Is.EqualTo(1));
+      });
 
       loggerMock.Verify(x => x.Log("Order saved"), Times.Once);
     }
@@ -46,17 +46,17 @@ namespace OrderProcessing.Tests
       paymentMock.Setup(x => x.Pay(It.Is<decimal>(a => a > 0))).Returns(true);
 
       var fakeRepo = new FakeOrderRepository();
-
       var service = new OrderService(paymentMock.Object, fakeRepo, loggerMock.Object);
-
       var result = service.PlaceOrder(new Order { Id = 1, Amount = 200 });
 
-      Assert.That(result, Is.True);
 
-      Assert.That(fakeRepo.Count(), Is.EqualTo(1));
+      Assert.Multiple(() =>
+      {
+        Assert.That(result, Is.True);
+        Assert.That(fakeRepo.Count(), Is.EqualTo(1));
+      });
 
       paymentMock.Verify(x => x.Pay(It.Is<decimal>(a => a == 200)), Times.Once);
-
       loggerMock.Verify(x => x.Log(It.Is<string>(s => s.Contains("Order"))));
 
       loggerMock.VerifyNoOtherCalls();
@@ -67,7 +67,6 @@ namespace OrderProcessing.Tests
     public void PlaceOrder_PaymentFails_ThrowsAndSkipsSave()
     {
       var loggerMock = new Mock<ILogger>();
-
       var paymentMock = new Mock<IPaymentGateway>();
       paymentMock.Setup(x => x.Pay(It.IsAny<decimal>())).Throws(new Exception("Payment failed"));
     }
