@@ -4,13 +4,15 @@
   {
     static void Main(string[] args)
     {
-      Order order = new Order();
+      // Order order = new Order();
+      //
+      // order.StatusChanged += SendEmail;
+      // order.StatusChanged += LogStatus;
+      //
+      // order.SetStatus("Paid");
+      // order.SetStatus("Shipped");
 
-      order.StatusChanged += SendEmail;
-      order.StatusChanged += LogStatus;
-
-      order.SetStatus("Paid");
-      order.SetStatus("Shipped");
+      CountdownTimer.Run();
     }
 
     static void SendEmail(string status)
