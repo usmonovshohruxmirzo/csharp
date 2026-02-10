@@ -2,7 +2,6 @@
 
 namespace MyNamespace
 {
-
     class Customer
     {
         public int Id;
@@ -15,36 +14,35 @@ namespace MyNamespace
         public int CustomerId;
         public decimal Amount;
     }
+
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World");
-
-            List<int> numbers = new List<int> { 1, 2, 3, 4, 5, 6 };
-
-            var evenNumbers = from n in numbers
-                              where n % 2 == 0
-                              select n;
-
-            foreach (var num in evenNumbers)
-            {
-                Console.WriteLine(num);
-            }
+            // List<int> numbers = new List<int> { 4, 2, 3, 4, 5, 6 };
+            //
+            // var evenNumbers = from n in numbers
+            //                   where n % 2 == 0
+            //                   select n;
+            //
+            // foreach (var num in evenNumbers)
+            // {
+            //     Console.WriteLine(num);
+            // }
 
             var customers = new List<Customer>
-      {
-          new Customer { Id = 1, Name = "Alice" },
-          new Customer { Id = 2, Name = "Bob" },
-          new Customer { Id = 3, Name = "Charlie" }
-      };
+            {
+                new Customer { Id = 1, Name = "Alice" },
+                new Customer { Id = 2, Name = "Bob" },
+                new Customer { Id = 3, Name = "Charlie" }
+            };
 
             var orders = new List<Order>
-        {
-            new Order { Id = 101, CustomerId = 1, Amount = 120 },
-            new Order { Id = 102, CustomerId = 1, Amount = 80 },
-            new Order { Id = 103, CustomerId = 2, Amount = 200 }
-        };
+            {
+                new Order { Id = 101, CustomerId = 1, Amount = 120 },
+                new Order { Id = 102, CustomerId = 1, Amount = 80 },
+                new Order { Id = 103, CustomerId = 2, Amount = 200 }
+            };
 
 
             var query =
@@ -54,7 +52,7 @@ namespace MyNamespace
                     into orderGroup                      // into (group join)
                 from og in orderGroup.DefaultIfEmpty()   // LEFT JOIN
                 where og == null || og.Amount > 100      // filter
-                let customerName = c.Name.ToUpper()      // let
+                let customerName = c.Name?.ToUpper()      // let
                 orderby customerName                     // order
                 group og by customerName                 // group by
                 into g                                   // into (query continuation)
