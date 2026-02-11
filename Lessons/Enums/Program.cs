@@ -1,6 +1,6 @@
 ﻿//INFO: An enum (enumeration) is a value type that represents a fixed set of named constants.
 
-using System.Runtime.InteropServices.Swift;
+using FileAccessSystem;
 
 namespace Enums
 {
@@ -90,6 +90,10 @@ namespace Enums
       Console.WriteLine($"Updated Permissions: {userPermission}");
       userPermission &= ~Permissions.Write; // Remove Write
       Console.WriteLine($"After removing Write: {userPermission}"); // Read, Execute
+
+
+      H("TASK");
+      FileAccessSystem.FileAccessSystem.Run();
     }
 
     static void H(string s)
