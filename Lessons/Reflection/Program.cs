@@ -77,6 +77,7 @@ public class User
   public string Name { get; set; } = "";
   public int Age { get; set; }
 }
+
 class Program
 {
   static void Main(string[] args)
@@ -100,24 +101,19 @@ class Program
     // };
     //
     // TableOfRecordsCreator.WriteTable(users, Console.Out);
-    
-    BypassingAccessModifiers.Run();
-
-
-    //
 
     // var type = typeof(MyNamespace.MyClass);
     // string info = $"{type.Namespace}, {type.Name}, {type.FullName}, {type.BaseType.Name}";
     // Console.WriteLine(info);
     //
     // // --------------------------------------------------
-    // // 1️⃣ Get Type metadata for Person class
+    // // Get Type metadata for Person class
     // // --------------------------------------------------
     // Type personType = typeof(Person);  // gets the Type object at compile-time
     // Console.WriteLine("Type Name: " + personType.FullName);
     //
     // // --------------------------------------------------
-    // // 2️⃣ List constructors
+    // // List constructors
     // // --------------------------------------------------
     // Console.WriteLine("\nConstructors:");
     // ConstructorInfo[] constructors = personType.GetConstructors(); // only public constructors
@@ -127,7 +123,7 @@ class Program
     // }
     //
     // // --------------------------------------------------
-    // // 3️⃣ List public properties
+    // // List public properties
     // // --------------------------------------------------
     // Console.WriteLine("\nProperties:");
     // PropertyInfo[] props = personType.GetProperties();
@@ -138,7 +134,7 @@ class Program
     // }
     //
     // // --------------------------------------------------
-    // // 4️⃣ List public methods
+    // // List public methods
     // // --------------------------------------------------
     // Console.WriteLine("\nMethods:");
     // MethodInfo[] methods = personType.GetMethods();
@@ -149,7 +145,7 @@ class Program
     // }
     //
     // // --------------------------------------------------
-    // // 5️⃣ List all fields, including private
+    // // List all fields, including private
     // // --------------------------------------------------
     // Console.WriteLine("\nFields:");
     // FieldInfo[] fields = personType.GetFields(BindingFlags.NonPublic | BindingFlags.Instance);
@@ -160,13 +156,13 @@ class Program
     // }
     //
     // // --------------------------------------------------
-    // // 6️⃣ Create instance using default constructor
+    // // Create instance using default constructor
     // // --------------------------------------------------
     // object personInstance = Activator.CreateInstance(personType);
     // Console.WriteLine("\nCreated instance using default constructor.");
     //
     // // --------------------------------------------------
-    // // 7️⃣ Dynamically set public properties
+    // // Dynamically set public properties
     // // --------------------------------------------------
     // PropertyInfo nameProp = personType.GetProperty("Name");
     // nameProp.SetValue(personInstance, "Alice"); // set Name to Alice
@@ -179,33 +175,33 @@ class Program
     // Console.WriteLine($"Age set to: {ageProp.GetValue(personInstance)}");
     //
     // // --------------------------------------------------
-    // // 8️⃣ Access and modify private field 'id'
+    // // Access and modify private field 'id'
     // // --------------------------------------------------
     // FieldInfo idField = personType.GetField("id", BindingFlags.NonPublic | BindingFlags.Instance);
     // idField.SetValue(personInstance, 99); // set id to 99
     // Console.WriteLine($"Private field 'id' set to: {idField.GetValue(personInstance)}");
     //
     // // --------------------------------------------------
-    // // 9️⃣ Call public method Greet
+    // // Call public method Greet
     // // --------------------------------------------------
     // MethodInfo greetMethod = personType.GetMethod("Greet");
     // greetMethod.Invoke(personInstance, new object[] { "Welcome to Reflection!" }); // pass message parameter
     //
     // // --------------------------------------------------
-    // // 🔟 Call private method Secret
+    // // Call private method Secret
     // // --------------------------------------------------
     // MethodInfo secretMethod = personType.GetMethod("Secret", BindingFlags.NonPublic | BindingFlags.Instance);
     // secretMethod.Invoke(personInstance, null); // no parameters
     //
     // // --------------------------------------------------
-    // // 1️⃣1️⃣ Create instance with overloaded constructor
+    // // Create instance with overloaded constructor
     // // --------------------------------------------------
     // object personWithParams = Activator.CreateInstance(personType, new object[] { "Bob", 30 });
     // // Read properties of the new instance
     // Console.WriteLine($"\nCreated instance with parameters: Name = {personType.GetProperty("Name").GetValue(personWithParams)}, Age = {personType.GetProperty("Age").GetValue(personWithParams)}");
     //
     // // --------------------------------------------------
-    // // 1️⃣2️⃣ Read class-level custom attribute
+    // // Read class-level custom attribute
     // // --------------------------------------------------
     // Console.WriteLine("\nClass-level Attributes:");
     // object[] classAttrs = personType.GetCustomAttributes(typeof(MyCustomAttribute), false);
@@ -216,7 +212,7 @@ class Program
     // }
     //
     // // --------------------------------------------------
-    // // 1️⃣3️⃣ Read method-level custom attribute
+    // // Read method-level custom attribute
     // // --------------------------------------------------
     // Console.WriteLine("\nMethod-level Attributes:");
     // MethodInfo greet = personType.GetMethod("Greet");
