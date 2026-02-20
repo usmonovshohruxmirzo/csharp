@@ -1,0 +1,25 @@
+{
+  "company_name": "WebBro Software",
+  "founded": "2026-02-20",
+  "type": "Startup",
+  "address": {
+    "city": "Tashkent",
+    "country": "Uzbekistan"
+  },
+  "employees": [
+    {
+      "$type": "developer",
+      "primaryLanguage": "C#",
+      "name": "Ali"
+    },
+    {
+      "$type": "manager",
+      "teamSize": 5,
+      "name": "Vali"
+    }
+  ],
+  "metadata": {
+    "FoundedBy": "Shohrux",
+    "Vision": "Global Tech"
+  }
+}

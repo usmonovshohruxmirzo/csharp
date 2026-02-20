@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Person xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <FirstName>John</FirstName>
+  <LastName>Doe</LastName>
+  <Age>48</Age>
+  <Position>Backend Software Enginner</Position>
+  <Level>Senior</Level>
+  <Salary>100</Salary>
+  <Location>USA</Location>
+  <Organazation>Google</Organazation>
+</Person>
