@@ -1,0 +1,16 @@
+<root
+    xmlns:h="http://www.w3.org/TR/html4/"
+    xmlns:b="http://www.books.com/schema">
+
+  <h:table>
+    <h:tr>
+      <h:td>Cell 1</h:td>
+    </h:tr>
+  </h:table>
+
+  <b:table>
+    <b:title>C# Book</b:title>
+    <b:author>John</b:author>
+  </b:table>
+
+</root>
