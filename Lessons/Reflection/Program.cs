@@ -222,5 +222,9 @@ class Program
     //     // print description from the attribute on Greet method
     //     Console.WriteLine($"Method attribute description: {attr.Description}");
     // }
+
+
+    ActivatorDemo.ActivatorExample.Run();
+    ReflectionEmit.Run();
   }
 }
