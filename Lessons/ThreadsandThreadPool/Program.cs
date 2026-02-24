@@ -1,4 +1,8 @@
-﻿namespace Program
+﻿#pragma warning disable
+
+using System.Net;
+
+namespace Program
 {
   class Program
   {
@@ -6,6 +10,7 @@
     static object _lock = new object();
     static Mutex mutex = new Mutex(false, "Global\\MyUniqueMutexName");
     static Semaphore semaphore = new Semaphore(3, 3);
+    static volatile bool _running = true;
 
     static void Main(string[] args)
     {
@@ -111,13 +116,140 @@
       // }
 
       // INFO: Thread Pool
-      for (int i = 1; i <= 10; i++)
+      // for (int i = 1; i <= 10; i++)
+      // {
+      //   ThreadPool.QueueUserWorkItem(ThreadPoolExample, i);
+      // }
+      //
+      // Console.WriteLine("Main thread finished");
+      // Console.ReadLine();
+
+      // INFO: Foreground Thread
+      // A foreground thread keeps the application alive.
+      // The process will NOT exit until all foreground threads finish.
+
+
+      // Thread thread = new Thread(() =>
+      // {
+      //   Console.WriteLine("Foreground thread started");
+      //   Thread.Sleep(5000);
+      //   Console.WriteLine("Foreground thread finished");
+      // });
+      //
+      // thread.IsBackground = false;
+      // thread.Start();
+      // Console.WriteLine("Main thread finished");
+
+      // INFO: Background Thread
+      // A background thread does NOT keep the application alive.
+      // When all foreground threads finish → the process exits
+      // Even if background threads are still running. 
+
+      // Thread thread = new Thread(() =>
+      //    {
+      //      Console.WriteLine("Background thread started");
+      //      Thread.Sleep(5000);
+      //      Console.WriteLine("Background thread finished");
+      //    });
+      //
+      // thread.IsBackground = true;
+      // thread.Start();
+      //
+      // Console.WriteLine("Main thread finished");
+
+      // INFO: Thread Pool
+      // ThreadPool.QueueUserWorkItem(state =>
+      //    {
+      //      Console.WriteLine("Hello from thread pool");
+      //    });
+      //
+      // Console.ReadLine();
+
+      // string[] urls =
+      // {
+      //       "https://example.com",
+      //       "https://google.com",
+      //       "https://github.com"
+      // };
+      //
+      // foreach (var url in urls)
+      // {
+      //   ThreadPool.QueueUserWorkItem(DownloadPage, url);
+      // }
+      // Console.ReadLine();
+
+
+      // INFO: volatile
+
+      // Thread t = new Thread(Worker);
+      // t.Start();
+      //
+      // Thread.Sleep(2000);
+      // _running = false;
+      //
+      // Console.WriteLine("Stop signal sent");
+
+      // INFO: Interlocked
+
+
+      Thread t1 = new Thread(InterlockedIncrement);
+      Thread t2 = new Thread(InterlockedIncrement);
+
+      t1.Start();
+      t2.Start();
+
+      t1.Join();
+      t2.Join();
+
+      Console.WriteLine(counter);
+
+      // Others
+      //
+      // int resultFromTread = 0;
+      // Thread thread = new Thread(() =>
+      // {
+      //   Thread.Sleep(5000);
+      //   resultFromTread = 100;
+      // });
+      // thread.Start();
+      // thread.Join();
+      // var result = $"Result: {resultFromTread}";
+      // Console.WriteLine(result);
+
+      // for (int i = 1; i <= 5; i++)
+      // {
+      //   new Thread(() => Console.Write(i)).Start();
+      // }
+    }
+
+    ////////////////////////////////////////////////////////////////////////////////////
+
+
+    static void InterlockedIncrement()
+    {
+      for (int i = 0; i < 100000; i++)
       {
-        ThreadPool.QueueUserWorkItem(ThreadPoolExample, i);
+        Interlocked.Increment(ref counter);
+      }
+    }
+
+    static void Worker()
+    {
+      while (_running)
+      {
       }
 
-      Console.WriteLine("Main thread finished");
-      Console.ReadLine();
+      Console.WriteLine("Worker stopped");
+    }
+
+    static void DownloadPage(object state)
+    {
+      string url = (string)state;
+      using (WebClient client = new WebClient())
+      {
+        string data = client.DownloadString(url);
+        Console.WriteLine($"Downloaded {url} | Size: {data.Length}");
+      }
     }
 
     static void ThreadPoolExample(object id)
