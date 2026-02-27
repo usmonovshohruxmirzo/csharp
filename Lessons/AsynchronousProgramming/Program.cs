@@ -6,8 +6,6 @@
  * It prevents blocking threads.
 */
 
-using System.Security.Cryptography;
-
 namespace Program
 {
   class Program
@@ -17,7 +15,9 @@ namespace Program
       // await BasicAsyncExample();
       // await TaskCoordinationExample();
       // await CancellationExample();
-      await ProgressExample();
+      // await ProgressExample();
+      // await HttpExample();
+      await ParallelExample();
     }
 
     static async Task BasicAsyncExample()
@@ -93,6 +93,29 @@ namespace Program
         await Task.Delay(300);
         progress.Report(i);
       }
+    }
+
+    static async Task HttpExample()
+    {
+      Console.WriteLine("\n[HTTP Async] Starting...");
+      string URL = "https://jsonplaceholder.typicode.com/todos/1";
+
+      using HttpClient client = new();
+      var response = await client.GetStringAsync(URL);
+      Console.ForegroundColor = ConsoleColor.Green;
+      Console.WriteLine(response);
+      Console.ResetColor();
+    }
+
+    static async Task ParallelExample()
+    {
+      Console.WriteLine("\n[Parallel CPU Work] Starting...");
+      var env = Environment.CurrentManagedThreadId;
+      Parallel.For(0, 5, i =>
+      {
+        Console.WriteLine($"Parallel Work {i} Thread {env}");
+      });
+      Console.WriteLine("[Parallel CPU Work] Finished");
     }
   }
 }
