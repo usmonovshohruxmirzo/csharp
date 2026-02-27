@@ -11,6 +11,7 @@ namespace Program
     static Mutex mutex = new Mutex(false, "Global\\MyUniqueMutexName");
     static Semaphore semaphore = new Semaphore(3, 3);
     static volatile bool _running = true;
+    static AutoResetEvent foodReady = new AutoResetEvent(false);
 
     static void Main(string[] args)
     {
@@ -191,17 +192,26 @@ namespace Program
 
       // INFO: Interlocked
 
+      // Thread t1 = new Thread(InterlockedIncrement);
+      // Thread t2 = new Thread(InterlockedIncrement);
+      //
+      // t1.Start();
+      // t2.Start();
+      //
+      // t1.Join();
+      // t2.Join();
+      //
+      // Console.WriteLine(counter);
 
-      Thread t1 = new Thread(InterlockedIncrement);
-      Thread t2 = new Thread(InterlockedIncrement);
+      // INFO: WaitForSignal
 
-      t1.Start();
-      t2.Start();
-
-      t1.Join();
-      t2.Join();
-
-      Console.WriteLine(counter);
+      Thread driver = new Thread(WaitForFood);
+      driver.Start();
+      Console.WriteLine("Restaurant is preparing food...");
+      Thread.Sleep(3000); // simulate cooking time
+      Console.WriteLine("Restaurant: Food is ready!");
+      foodReady.Set();  // This wakes up the driver
+      Console.ReadLine();
 
       // Others
       //
@@ -224,6 +234,12 @@ namespace Program
 
     ////////////////////////////////////////////////////////////////////////////////////
 
+    static void WaitForFood()
+    {
+      Console.WriteLine("Driver: Waiting for food...");
+      foodReady.WaitOne();
+      Console.WriteLine("Driver: Got the food! Delivering now...");
+    }
 
     static void InterlockedIncrement()
     {
@@ -264,13 +280,12 @@ namespace Program
     static void SemaphoreExample(int id)
     {
       Console.WriteLine($"Thread {id} waiting... ⏳");
-
-      semaphore.WaitOne(); // Try to enter
+      semaphore.WaitOne();
 
       try
       {
         Console.WriteLine($"Thread {id} entered ✅");
-        Thread.Sleep(3000); // Simulate work
+        Thread.Sleep(3000);
       }
       finally
       {
