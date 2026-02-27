@@ -171,22 +171,24 @@
       //   await Task.Delay(2000);
       // }
 
-      string result = string.Empty;
-      Task<int> task = Task.Run(() =>
-      {
-        int i = 0;
-        return 1000 / i;
-      });
-      try
-      {
-        result = $"Result = {task.Result}";
-      }
-      catch (DivideByZeroException ex)
-      {
-        result = "DivideByZeroException";
-      }
-      Console.WriteLine(result);
+      // INFO: Exception
+      // var task1 = Task.Run(() => throw new Exception("Error 1"));
+      // var task2 = Task.Run(() => throw new Exception("Error 2"));
+      //
+      // try
+      // {
+      //   Task.WaitAll(task1, task2);
+      // }
+      // catch (AggregateException ex)
+      // {
+      //   Console.WriteLine(ex.GetType().Name);
+      //   foreach (var inner in ex.InnerExceptions)
+      //   {
+      //     Console.WriteLine("- {0}", inner.Message);
+      //   }
+      // }
 
+      await ConcurrentDownloadManager.Run();
     }
 
     static async Task<bool> FakeApiCall()
