@@ -1,7 +1,4 @@
 ﻿// INFO: ADO.NET is a data access technology in C# (.NET) used to connect to databases, execute queries, and manipulate data.
-
-using Npgsql;
-
 // INFO: Connection to PostgreSQL
 string connectionString = "Host=localhost;Port=5432;Username=postgres;Password=usmonovdev777;Database=postgres";
 using NpgsqlConnection connection = new(connectionString);
@@ -9,6 +6,11 @@ using NpgsqlConnection connection = new(connectionString);
 await connection.OpenAsync();
 Console.WriteLine("Connected to PostgreSQL!");
 
+// var todo = new Todo(connection);
+// todo.Run();
+
+var sqlLite = new SqlLite();
+sqlLite.Select();
 
 // INFO: SELECT Query (Read Data)
 
@@ -62,11 +64,34 @@ Console.WriteLine("Connected to PostgreSQL!");
 // }
 
 // INFO: Async
-string query = "SELECT * FROM users";
-await using var cmd = new NpgsqlCommand(query, connection);
-await using var reader = await cmd.ExecuteReaderAsync();
 
-while (await reader.ReadAsync())
-{
-    Console.WriteLine(reader["name"]);
-}
+// string query = "SELECT * FROM users";
+// await using var cmd = new NpgsqlCommand(query, connection);
+// await using var reader = await cmd.ExecuteReaderAsync();
+//
+// while (await reader.ReadAsync())
+// {
+//     Console.WriteLine(reader["name"]);
+// }
+
+// string query = "SELECT COUNT(*) FROM users";
+// await using var cmd = new NpgsqlCommand(query, connection);
+// int count = Convert.ToInt32(await cmd.ExecuteScalarAsync());
+// Console.WriteLine($"Total users: {count}");
+
+
+// INFO: Batch Insert (Multiple Records)
+
+// var query = "INSERT INTO users(name, email) VALUES(@name, @email)";
+// await using var cmd = new NpgsqlCommand(query, connection);
+// cmd.Parameters.Add("@name", NpgsqlTypes.NpgsqlDbType.Text);
+// cmd.Parameters.Add("@email", NpgsqlTypes.NpgsqlDbType.Text);
+//
+// for (int i = 0; i < 5; i++)
+// {
+//   cmd.Parameters["@name"].Value = $"Name{i}";
+//   cmd.Parameters["@email"].Value = $"User{i}";
+//
+//   await cmd.ExecuteNonQueryAsync();
+// }
+//
