@@ -13,7 +13,7 @@ namespace Program
     static volatile bool _running = true;
     static AutoResetEvent foodReady = new AutoResetEvent(false);
 
-    static void Main(string[] args)
+    static async Task Main(string[] args)
     {
       // Thread mainThread = Thread.CurrentThread;
       // mainThread.Name = "Main Thread";
@@ -205,13 +205,13 @@ namespace Program
 
       // INFO: WaitForSignal
 
-      Thread driver = new Thread(WaitForFood);
-      driver.Start();
-      Console.WriteLine("Restaurant is preparing food...");
-      Thread.Sleep(3000); // simulate cooking time
-      Console.WriteLine("Restaurant: Food is ready!");
-      foodReady.Set();  // This wakes up the driver
-      Console.ReadLine();
+      // Thread driver = new Thread(WaitForFood);
+      // driver.Start();
+      // Console.WriteLine("Restaurant is preparing food...");
+      // Thread.Sleep(3000); // simulate cooking time
+      // Console.WriteLine("Restaurant: Food is ready!");
+      // foodReady.Set();  // This wakes up the driver
+      // Console.ReadLine();
 
       // Others
       //
@@ -230,6 +230,8 @@ namespace Program
       // {
       //   new Thread(() => Console.Write(i)).Start();
       // }
+
+      await MultiUserChatServerSimulator.Run(200, 10);
     }
 
     ////////////////////////////////////////////////////////////////////////////////////
