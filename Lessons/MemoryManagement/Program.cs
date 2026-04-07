@@ -9,15 +9,17 @@
         {
             // CreateStudent();
             // GarbageCollector.Run();
-            FileHandler fh = new FileHandler("test.txt");
-            fh.ReadFile();
-            fh.Dispose();
+            // FileHandler fh = new FileHandler("test.txt");
+            // fh.ReadFile();
+            // fh.Dispose();
+            //
+            // using (var buf = new NativeBuffer(1024))
+            // {
+            //     Console.WriteLine("Using buffer");
+            // }
+            // Console.WriteLine("End of Main");
 
-            using (var buf = new NativeBuffer(1024))
-            {
-                Console.WriteLine("Using buffer");
-            }
-            Console.WriteLine("End of Main");
+            SpanExample.Run();
         }
 
         static void Calculate()
